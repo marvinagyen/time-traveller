@@ -17,6 +17,10 @@ public class PlayerMove_2 : MonoBehaviour
     public GameObject present;
     public GameObject future;
 
+    public GameObject past_player;
+    public GameObject present_player;
+    public GameObject future_player;
+
     void Start()
     {
         //anim = gameObject.GetComponentInChildren<Animator>();
@@ -59,18 +63,30 @@ public class PlayerMove_2 : MonoBehaviour
             past.SetActive(true);
             present.SetActive(false);
             future.SetActive(false);
+
+            past_player.SetActive(true);
+            present_player.SetActive(false);
+            future_player.SetActive(false);
         }
         if (Input.GetKeyDown("2"))
         {
             past.SetActive(false);
             present.SetActive(true);
             future.SetActive(false);
+
+            past_player.SetActive(false);
+            present_player.SetActive(true);
+            future_player.SetActive(false);
         }
         if (Input.GetKeyDown("3"))
         {
             past.SetActive(false);
             present.SetActive(false);
             future.SetActive(true);
+
+            past_player.SetActive(false);
+            present_player.SetActive(false);
+            future_player.SetActive(true);
         }
     }
 

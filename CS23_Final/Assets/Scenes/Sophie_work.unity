@@ -417,6 +417,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &473335038 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4621258805720857646, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
+  m_PrefabInstance: {fileID: 3073060853916759113}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &501859794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,7 +1042,7 @@ GameObject:
   - component: {fileID: 1139554484}
   m_Layer: 0
   m_Name: present
-  m_TagString: Untagged
+  m_TagString: present
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1050,7 +1055,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139554483}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1378,6 +1383,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4641075, y: 30.011745}
   m_EdgeRadius: 0
+--- !u!1 &1592823116 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8231980543059897059, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
+  m_PrefabInstance: {fileID: 3073060853916759113}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1604301475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,7 +1504,7 @@ GameObject:
   - component: {fileID: 1612847420}
   m_Layer: 0
   m_Name: past
-  m_TagString: Untagged
+  m_TagString: past
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1507,7 +1517,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612847419}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1635,7 +1645,7 @@ GameObject:
   - component: {fileID: 1789694405}
   m_Layer: 0
   m_Name: future
-  m_TagString: Untagged
+  m_TagString: future
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1648,7 +1658,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789694404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1917,6 +1927,22 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3374796282833443831, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988001480631515262, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
+      propertyPath: m_TagString
+      value: past
+      objectReference: {fileID: 0}
+    - target: {fileID: 4621258805720857646, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
+      propertyPath: m_TagString
+      value: future
+      objectReference: {fileID: 0}
+    - target: {fileID: 8231980543059897059, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
+      propertyPath: m_TagString
+      value: present
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2491090609747749863, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
     m_RemovedGameObjects: []
@@ -1929,6 +1955,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 9127955806521406812}
   m_SourcePrefab: {fileID: 100100000, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
+--- !u!1 &3073060853916759114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3988001480631515262, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
+  m_PrefabInstance: {fileID: 3073060853916759113}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7891273350427290186 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2328080217605979674, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
@@ -1952,6 +1983,9 @@ MonoBehaviour:
   past: {fileID: 1612847419}
   present: {fileID: 1139554483}
   future: {fileID: 1789694404}
+  past_player: {fileID: 3073060853916759114}
+  present_player: {fileID: 1592823116}
+  future_player: {fileID: 473335038}
 --- !u!61 &9127955806521406812
 BoxCollider2D:
   m_ObjectHideFlags: 0
