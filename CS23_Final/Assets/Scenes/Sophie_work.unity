@@ -1917,6 +1917,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2515557174658552679, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3234902693581188618, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3374796282833443831, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -1926,8 +1934,16 @@ PrefabInstance:
       value: past
       objectReference: {fileID: 0}
     - target: {fileID: 4621258805720857646, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4621258805720857646, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
       propertyPath: m_TagString
       value: future
+      objectReference: {fileID: 0}
+    - target: {fileID: 8231980543059897059, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8231980543059897059, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
       propertyPath: m_TagString
