@@ -53,6 +53,7 @@ public class PlayerMove_2 : MonoBehaviour
                 playerTurn();
             }
         }
+        // FOR CHANGING SCENES
         if (Input.GetKeyDown("1"))
         {
             past.SetActive(true);
@@ -72,6 +73,8 @@ public class PlayerMove_2 : MonoBehaviour
             future.SetActive(true);
         }
     }
+
+
 
     private void playerTurn()
     {
