@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMove_2 : MonoBehaviour
 {
-
+    //public Transform[] scenes;
+    //private int rangeEnd;
     //public Animator anim;
     //public AudioSource WalkSFX;
     public Rigidbody2D rb2D;
@@ -12,11 +13,16 @@ public class PlayerMove_2 : MonoBehaviour
     public static float runSpeed = 10f;
     public float startSpeed = 10f;
     public bool isAlive = true;
+    public GameObject past;
+    public GameObject present;
+    public GameObject future;
 
     void Start()
     {
         //anim = gameObject.GetComponentInChildren<Animator>();
         rb2D = transform.GetComponent<Rigidbody2D>();
+        //rangeEnd = scenes.Length - 1;
+
     }
 
     void Update()
@@ -46,6 +52,24 @@ public class PlayerMove_2 : MonoBehaviour
             {
                 playerTurn();
             }
+        }
+        if (Input.GetKeyDown("1"))
+        {
+            past.SetActive(true);
+            present.SetActive(false);
+            future.SetActive(false);
+        }
+        if (Input.GetKeyDown("2"))
+        {
+            past.SetActive(false);
+            present.SetActive(true);
+            future.SetActive(false);
+        }
+        if (Input.GetKeyDown("3"))
+        {
+            past.SetActive(false);
+            present.SetActive(false);
+            future.SetActive(true);
         }
     }
 
