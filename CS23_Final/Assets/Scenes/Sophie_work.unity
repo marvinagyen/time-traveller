@@ -417,11 +417,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &473335038 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4621258805720857646, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
-  m_PrefabInstance: {fileID: 3073060853916759113}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &501859794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,11 +1378,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4641075, y: 30.011745}
   m_EdgeRadius: 0
---- !u!1 &1592823116 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8231980543059897059, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
-  m_PrefabInstance: {fileID: 3073060853916759113}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1604301475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1957,7 +1947,17 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
 --- !u!1 &3073060853916759114 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3988001480631515262, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2515557174658552679, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
+  m_PrefabInstance: {fileID: 3073060853916759113}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3073060853916759115 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3234902693581188618, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
+  m_PrefabInstance: {fileID: 3073060853916759113}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3073060853916759116 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8936230236643188811, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
   m_PrefabInstance: {fileID: 3073060853916759113}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &7891273350427290186 stripped
@@ -1983,9 +1983,9 @@ MonoBehaviour:
   past: {fileID: 1612847419}
   present: {fileID: 1139554483}
   future: {fileID: 1789694404}
-  past_player: {fileID: 3073060853916759114}
-  present_player: {fileID: 1592823116}
-  future_player: {fileID: 473335038}
+  past_player: {fileID: 3073060853916759116}
+  present_player: {fileID: 3073060853916759115}
+  future_player: {fileID: 3073060853916759114}
 --- !u!61 &9127955806521406812
 BoxCollider2D:
   m_ObjectHideFlags: 0
