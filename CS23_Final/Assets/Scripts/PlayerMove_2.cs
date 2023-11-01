@@ -29,7 +29,7 @@ public class PlayerMove_2 : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
         //NOTE: Horizontal axis: [a] / left arrow is -1, [d] / right arrow is 1
         //NOTE: Vertical axis: [w] / up arrow, [s] / down arrow

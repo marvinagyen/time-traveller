@@ -215,7 +215,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.034189224, y: -14.711397}
+  m_Offset: {x: 0.6048374, y: -15.852695}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -226,7 +226,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 30.05983, y: 0.40533066}
+  m_Size: {x: 35.95654, y: 2.6879272}
   m_EdgeRadius: 0
 --- !u!1 &431063823
 GameObject:
@@ -293,7 +293,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 14.794409, y: 0.09763527}
+  m_Offset: {x: 16.534904, y: -0.2050581}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -304,7 +304,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.53939056, y: 30.023296}
+  m_Size: {x: 4.0203934, y: 34.56372}
   m_EdgeRadius: 0
 --- !u!50 &431063826
 Rigidbody2D:
@@ -566,7 +566,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.034189224, y: -14.711397}
+  m_Offset: {x: -0.7982235, y: -16.37622}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -577,7 +577,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 30.05983, y: 0.40533066}
+  m_Size: {x: 35.659695, y: 3.7349777}
   m_EdgeRadius: 0
 --- !u!50 &610399040
 Rigidbody2D:
@@ -698,7 +698,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 14.794409, y: 0.09763527}
+  m_Offset: {x: 16.458801, y: 0.022921562}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -709,7 +709,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.53939056, y: 30.023296}
+  m_Size: {x: 3.8681793, y: 34.248856}
   m_EdgeRadius: 0
 --- !u!1 &703491272
 GameObject:
@@ -803,7 +803,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.034189224, y: -14.711397}
+  m_Offset: {x: 0.65239334, y: -15.90025}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -814,7 +814,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 30.05983, y: 0.40533066}
+  m_Size: {x: 35.67121, y: 2.7830372}
   m_EdgeRadius: 0
 --- !u!1 &722957726
 GameObject:
@@ -881,7 +881,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -14.763672, y: 0.091860294}
+  m_Offset: {x: -15.715842, y: -0.36218262}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -892,7 +892,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4641075, y: 30.011745}
+  m_Size: {x: 2.3684483, y: 32.736}
   m_EdgeRadius: 0
 --- !u!50 &722957729
 Rigidbody2D:
@@ -986,7 +986,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01102972, y: 14.751881}
+  m_Offset: {x: -0.086704254, y: 15.962662}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -997,7 +997,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 30.150269, y: 0.5197525}
+  m_Size: {x: 34.53935, y: 2.9413147}
   m_EdgeRadius: 0
 --- !u!50 &1054537983
 Rigidbody2D:
@@ -1154,7 +1154,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -14.763672, y: 0.091860294}
+  m_Offset: {x: -16.281275, y: 0.38921928}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1165,7 +1165,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4641075, y: 30.011745}
+  m_Size: {x: 3.4993134, y: 33.64993}
   m_EdgeRadius: 0
 --- !u!1 &1364909572
 GameObject:
@@ -1365,7 +1365,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -14.763672, y: 0.091860294}
+  m_Offset: {x: -16.222973, y: 0.38085842}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1376,7 +1376,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4641075, y: 30.011745}
+  m_Size: {x: 3.3827095, y: 33.823425}
   m_EdgeRadius: 0
 --- !u!1 &1604301475
 GameObject:
@@ -1470,7 +1470,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01102972, y: 14.751881}
+  m_Offset: {x: 0.49848652, y: 15.927687}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1481,7 +1481,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 30.150269, y: 0.5197525}
+  m_Size: {x: 35.71575, y: 2.8713646}
   m_EdgeRadius: 0
 --- !u!1 &1612847419
 GameObject:
@@ -1611,7 +1611,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 14.794409, y: 0.09763527}
+  m_Offset: {x: 16.363693, y: -0.024632454}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1622,7 +1622,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.53939056, y: 30.023296}
+  m_Size: {x: 3.6779633, y: 34.343956}
   m_EdgeRadius: 0
 --- !u!1 &1789694404
 GameObject:
@@ -1836,7 +1836,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01102972, y: 14.751881}
+  m_Offset: {x: 0.49848747, y: 15.927687}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1847,7 +1847,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 30.150269, y: 0.5197525}
+  m_Size: {x: 35.87253, y: 2.8713646}
   m_EdgeRadius: 0
 --- !u!1001 &3073060853916759113
 PrefabInstance:
