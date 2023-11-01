@@ -13,6 +13,7 @@ public class PlayerMove_2 : MonoBehaviour
     public static float runSpeed = 10f;
     public float startSpeed = 10f;
     public bool isAlive = true;
+    public bool canTimeTravel = false;
     public GameObject past;
     public GameObject present;
     public GameObject future;
@@ -20,6 +21,8 @@ public class PlayerMove_2 : MonoBehaviour
     public GameObject past_player;
     public GameObject present_player;
     public GameObject future_player;
+
+    public GameObject timeTravelButtons;
 
     void Start()
     { 
@@ -86,6 +89,14 @@ public class PlayerMove_2 : MonoBehaviour
             present_player.SetActive(false);
             future_player.SetActive(true);
         }
+
+        if (canTimeTravel)
+        {
+            timeTravelButtons.SetActive(true);
+        } else
+        {
+            timeTravelButtons.SetActive(false);
+        }
     }
 
 
@@ -106,6 +117,7 @@ public class PlayerMove_2 : MonoBehaviour
         if (other.gameObject.tag == "watch")
         {
             Destroy(other.gameObject);
+            canTimeTravel = true;
         }
     }
 }

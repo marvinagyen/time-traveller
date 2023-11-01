@@ -824,6 +824,45 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 35.67121, y: 2.7830372}
   m_EdgeRadius: 0
+--- !u!1 &722834547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 722834548}
+  m_Layer: 5
+  m_Name: Time_Travel_Buttons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &722834548
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722834547}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1070117559}
+  - {fileID: 1277298175}
+  - {fileID: 1380991156}
+  m_Father: {fileID: 1003827881}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &722957726
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,11 +978,10 @@ GameObject:
   m_Component:
   - component: {fileID: 796649991}
   - component: {fileID: 796649992}
-  - component: {fileID: 796649993}
   - component: {fileID: 796649994}
   m_Layer: 0
   m_Name: time_watch
-  m_TagString: Untagged
+  m_TagString: watch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1009,19 +1047,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.54720783, y: 0.6847651}
   m_EdgeRadius: 0
---- !u!114 &796649993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796649990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ea5f4ac910fe4390a3411fe8b4b3d43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canTimeTravel: 1
 --- !u!50 &796649994
 Rigidbody2D:
   serializedVersion: 4
@@ -1143,9 +1168,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1070117559}
-  - {fileID: 1277298175}
-  - {fileID: 1380991156}
+  - {fileID: 722834548}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1420,13 +1443,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1070117558}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1868109786}
-  m_Father: {fileID: 1003827881}
+  m_Father: {fileID: 722834548}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1722,13 +1745,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277298174}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1006358933}
-  m_Father: {fileID: 1003827881}
+  m_Father: {fileID: 722834548}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2055,13 +2078,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380991155}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1137420631}
-  m_Father: {fileID: 1003827881}
+  m_Father: {fileID: 722834548}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3128,7 +3151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3234902693581188618, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3374796282833443831, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3153,6 +3176,10 @@ PrefabInstance:
     - target: {fileID: 8231980543059897059, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
       propertyPath: m_TagString
       value: present
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936230236643188811, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2491090609747749863, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
@@ -3201,12 +3228,14 @@ MonoBehaviour:
   rb2D: {fileID: 0}
   startSpeed: 10
   isAlive: 1
+  canTimeTravel: 0
   past: {fileID: 1612847419}
   present: {fileID: 1139554483}
   future: {fileID: 1789694404}
   past_player: {fileID: 3073060853916759116}
   present_player: {fileID: 3073060853916759115}
   future_player: {fileID: 3073060853916759114}
+  timeTravelButtons: {fileID: 722834547}
 --- !u!61 &9127955806521406812
 BoxCollider2D:
   m_ObjectHideFlags: 0
