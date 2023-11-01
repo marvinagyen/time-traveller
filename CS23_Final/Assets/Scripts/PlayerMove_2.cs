@@ -22,10 +22,8 @@ public class PlayerMove_2 : MonoBehaviour
     public GameObject future_player;
 
     void Start()
-    {
-        //anim = gameObject.GetComponentInChildren<Animator>();
+    { 
         rb2D = transform.GetComponent<Rigidbody2D>();
-        //rangeEnd = scenes.Length - 1;
 
     }
 
@@ -103,11 +101,12 @@ public class PlayerMove_2 : MonoBehaviour
         transform.localScale = theScale;
     }
 
-    //void OnCollisionEnter2D(Collision2D other)
-    //{
-    //    if (other.gameObject.tag == "wall")
-    //    {
-            
-    //    }
-    //}
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "watch")
+        {
+            Destroy(other.gameObject);
+        }
+    }
 }
+
