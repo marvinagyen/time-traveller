@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - wall
+  - past
+  - present
+  - future
+  - watch
   layers:
   - Default
   - TransparentFX

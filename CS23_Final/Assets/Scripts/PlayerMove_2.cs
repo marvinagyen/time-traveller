@@ -13,19 +13,24 @@ public class PlayerMove_2 : MonoBehaviour
     public static float runSpeed = 10f;
     public float startSpeed = 10f;
     public bool isAlive = true;
-    public GameObject past;
-    public GameObject present;
-    public GameObject future;
+    public bool canTimeTravel = false;
+    //public GameObject past;
+    //public GameObject present;
+    //public GameObject future;
+
+    //public GameObject past_player;
+    //public GameObject present_player;
+    //public GameObject future_player;
+
+    public GameObject timeTravelButtons;
 
     void Start()
-    {
-        //anim = gameObject.GetComponentInChildren<Animator>();
+    { 
         rb2D = transform.GetComponent<Rigidbody2D>();
-        //rangeEnd = scenes.Length - 1;
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
         //NOTE: Horizontal axis: [a] / left arrow is -1, [d] / right arrow is 1
         //NOTE: Vertical axis: [w] / up arrow, [s] / down arrow
@@ -54,23 +59,43 @@ public class PlayerMove_2 : MonoBehaviour
             }
         }
         // FOR CHANGING SCENES
-        if (Input.GetKeyDown("1"))
+        //if (Input.GetKeyDown("1"))
+        //{
+        //    past.SetActive(true);
+        //    present.SetActive(false);
+        //    future.SetActive(false);
+
+        //    past_player.SetActive(true);
+        //    present_player.SetActive(false);
+        //    future_player.SetActive(false);
+        //}
+        //if (Input.GetKeyDown("2"))
+        //{
+        //    past.SetActive(false);
+        //    present.SetActive(true);
+        //    future.SetActive(false);
+
+        //    past_player.SetActive(false);
+        //    present_player.SetActive(true);
+        //    future_player.SetActive(false);
+        //}
+        //if (Input.GetKeyDown("3"))
+        //{
+        //    past.SetActive(false);
+        //    present.SetActive(false);
+        //    future.SetActive(true);
+
+        //    past_player.SetActive(false);
+        //    present_player.SetActive(false);
+        //    future_player.SetActive(true);
+        //}
+
+        if (canTimeTravel)
         {
-            past.SetActive(true);
-            present.SetActive(false);
-            future.SetActive(false);
-        }
-        if (Input.GetKeyDown("2"))
+            timeTravelButtons.SetActive(true);
+        } else
         {
-            past.SetActive(false);
-            present.SetActive(true);
-            future.SetActive(false);
-        }
-        if (Input.GetKeyDown("3"))
-        {
-            past.SetActive(false);
-            present.SetActive(false);
-            future.SetActive(true);
+            timeTravelButtons.SetActive(false);
         }
     }
 
@@ -87,11 +112,13 @@ public class PlayerMove_2 : MonoBehaviour
         transform.localScale = theScale;
     }
 
-    //void OnCollisionEnter2D(Collision2D other)
-    //{
-    //    if (other.gameObject.tag == "wall")
-    //    {
-            
-    //    }
-    //}
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "watch")
+        {
+            Destroy(other.gameObject);
+            canTimeTravel = true;
+        }
+    }
 }
+
