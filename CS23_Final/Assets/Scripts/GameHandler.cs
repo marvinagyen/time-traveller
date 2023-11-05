@@ -6,7 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour {
 
-      private GameObject player;
+    public GameObject past;
+    public GameObject present;
+    public GameObject future;
+
+    public GameObject past_player;
+    public GameObject present_player;
+    public GameObject future_player;
+
+    public GameObject textButton;
+
+    //public GameObject Player;
+
+
+    private GameObject player;
 
       //public static bool stairCaseUnlocked = false;
       //this is a flag check. Add to other scripts: GameHandler.stairCaseUnlocked = true;
@@ -17,11 +30,21 @@ public class GameHandler : MonoBehaviour {
       void Start(){
             player = GameObject.FindWithTag("Player");
             sceneName = SceneManager.GetActiveScene().name;
-            //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
-            //}
-      }
+        //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
+        //}
 
-      public void playerDies(){
+        textButton.SetActive(false);
+
+        past.SetActive(false);
+        present.SetActive(true);
+        future.SetActive(false);
+
+        past_player.SetActive(false);
+        present_player.SetActive(true);
+        future_player.SetActive(false);
+    }
+
+    public void playerDies(){
             // player.GetComponent<PlayerHurt>().playerDead();       //play Death animation
             lastLevelDied = sceneName;       //allows replaying the Level where you died
             StartCoroutine(DeathPause());
@@ -65,6 +88,62 @@ public class GameHandler : MonoBehaviour {
       public void Credits() {
             SceneManager.LoadScene("Credits");
       }
+
+    public void Update()
+    {
+        makeMessagesAppear();
+    }
+
+    public void goToPast()
+{
+   past.SetActive(true);
+   present.SetActive(false);
+   future.SetActive(false);
+
+   past_player.SetActive(true);
+   present_player.SetActive(false);
+   future_player.SetActive(false);
+}
+
+public void goToPresent()
+{
+    past.SetActive(false);
+    present.SetActive(true);
+    future.SetActive(false);
+
+    past_player.SetActive(false);
+    present_player.SetActive(true);
+    future_player.SetActive(false);
+}
+
+public void goToFuture()
+{
+    past.SetActive(false);
+    present.SetActive(false);
+    future.SetActive(true);
+
+    past_player.SetActive(false);
+    present_player.SetActive(false);
+    future_player.SetActive(true);
+}
+
+public void closeTextButton()
+{
+        Debug.Log("text");
+        textButton.SetActive(false);
+}
+
+void makeMessagesAppear()
+{
+    if (player.GetComponent<PlayerMove_2>().canTimeTravel)
+    {
+        textButton.SetActive(true);
+    }
+    else
+    {
+        textButton.SetActive(false);
+    }
+}
 }
 
 // public class GameHandler : MonoBehaviour
@@ -103,7 +182,7 @@ public class GameHandler : MonoBehaviour {
 //     {
 
 //         makeMessagesAppear();
-        
+
 
 //     }
 

@@ -2433,7 +2433,6 @@ MonoBehaviour:
   present_player: {fileID: 3073060853916759115}
   future_player: {fileID: 3073060853916759114}
   textButton: {fileID: 717599491}
-  Player: {fileID: 7891273350427290186}
 --- !u!1 &1544228918
 GameObject:
   m_ObjectHideFlags: 0
@@ -3648,6 +3647,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1631388821075635423, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2328080217605979674, guid: 929a742d34d2148b7b2d77add7eb22af, type: 3}
       propertyPath: m_Name
       value: Player_2
@@ -3752,7 +3755,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9703d8cb99f584941996ac9034687867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb2D: {fileID: 0}
   startSpeed: 10
   isAlive: 1
   canTimeTravel: 0
