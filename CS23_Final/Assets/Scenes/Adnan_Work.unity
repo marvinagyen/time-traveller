@@ -303,11 +303,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: b7d842758c5e645819995e3dc46e16ba, type: 3}
     - target: {fileID: 192364017478068683, guid: a9af744699d954ffca3110f5555bddb6, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 192364017478068683, guid: a9af744699d954ffca3110f5555bddb6, type: 3}
       propertyPath: m_SortingLayerID
-      value: -781193131
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1975849350990025752, guid: a9af744699d954ffca3110f5555bddb6, type: 3}
       propertyPath: moveSpeed
