@@ -332,12 +332,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9703d8cb99f584941996ac9034687867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb2D: {fileID: 0}
   startSpeed: 10
   isAlive: 1
-  past: {fileID: 5282953865257739634}
-  present: {fileID: 3094384839384251233}
-  future: {fileID: 7677137216360975689}
+  canTimeTravel: 0
+  timeTravelButtons: {fileID: 0}
 --- !u!1 &7677137216360975689
 GameObject:
   m_ObjectHideFlags: 0
