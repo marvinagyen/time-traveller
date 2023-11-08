@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - GameHandler
+  - wall
+  - watch
+  - present
+  - past
+  - future
   layers:
   - Default
   - TransparentFX
@@ -13,9 +19,9 @@ TagManager:
   - UI
   - 
   - 
+  - objects
   - 
-  - 
-  - 
+  - player
   - 
   - 
   - 
@@ -40,4 +46,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: objects
+    uniqueID: 4286492277
+    locked: 0
+  - name: player
+    uniqueID: 1525619437
     locked: 0
