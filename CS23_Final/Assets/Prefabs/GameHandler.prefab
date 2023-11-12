@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4880395191172180032}
-  - component: {fileID: 8391501107635923291}
   - component: {fileID: 7854089316557919474}
+  - component: {fileID: 1131875026712458994}
+  - component: {fileID: -8800935352730846328}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: GameHandler
@@ -31,20 +32,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8391501107635923291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6480356790232833260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf4daf5b5dfb0b742a0c33fd194781a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7854089316557919474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,3 +61,37 @@ MonoBehaviour:
   item3Text: {fileID: 0}
   item4Text: {fileID: 0}
   item5Text: {fileID: 0}
+--- !u!114 &1131875026712458994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6480356790232833260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c4796bab21964fc9947978fe86dfc6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameisPaused: 0
+  pauseMenuUI: {fileID: 0}
+  mixer: {fileID: 24100000, guid: 0ca27623961a04ce5b76ff63aec732ec, type: 2}
+--- !u!114 &-8800935352730846328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6480356790232833260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1d79bc9bc9174f38bc7e7439a0d4864, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  past: {fileID: 0}
+  present: {fileID: 0}
+  future: {fileID: 0}
+  past_player: {fileID: 0}
+  present_player: {fileID: 0}
+  future_player: {fileID: 0}
+  textButton: {fileID: 0}
