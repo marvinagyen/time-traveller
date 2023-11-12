@@ -16,7 +16,9 @@ public class GameHandler : MonoBehaviour {
 
     public GameObject textButton;
 
-    //public GameObject Player;
+    private GameHandler_PauseMenu pause_Menu;
+
+    //public GameObject Player
 
 
     private GameObject player;
@@ -65,6 +67,7 @@ public class GameHandler : MonoBehaviour {
       // Return to MainMenu
       public void RestartGame() {
             Time.timeScale = 1f;
+            pause_Menu.GameisPaused = false;
             SceneManager.LoadScene("MainMenu");
              // Reset all static variables here, for new games:
       }
@@ -72,6 +75,7 @@ public class GameHandler : MonoBehaviour {
       // Replay the Level where you died
       public void ReplayLastLevel() {
             Time.timeScale = 1f;
+            pause_Menu.GameisPaused = false;
             SceneManager.LoadScene(lastLevelDied);
              // Reset all static variables here, for new games:
       }

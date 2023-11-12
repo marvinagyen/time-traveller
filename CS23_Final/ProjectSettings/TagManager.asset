@@ -10,6 +10,7 @@ TagManager:
   - present
   - past
   - future
+  - PauseMenuSlider
   layers:
   - Default
   - TransparentFX
