@@ -11,6 +11,7 @@ TagManager:
   - past
   - future
   - PauseMenuSlider
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

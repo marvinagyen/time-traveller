@@ -7,8 +7,13 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     Vector2 movement;
+    private Vector3 respawnPoint;
 
     // Update is called once per frame
+    void Start () {
+        rb = GetComponent<Rigidbody2D>();
+        respawnPoint = transform.position;
+    }
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
@@ -18,5 +23,11 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate() 
     {
         rb.MovePosition(rb.position + movement  * moveSpeed * Time.fixedDeltaTime);
+    }
+
+    void OnTriggerEnter2D (Collider2D collision) {
+        if (collision.tag == "Checkpoint") {
+            transform.position = respawnPoint;
+        }
     }
 }
