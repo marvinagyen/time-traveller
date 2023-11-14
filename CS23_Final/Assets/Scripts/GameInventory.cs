@@ -158,6 +158,12 @@ public class GameInventory : MonoBehaviour {
             InventoryRemove("item1", 3); InventoryRemove("item2",1); // sample inventory items to be removed
       }
 
+      // Craft Object 2 is for creating the lockpick. The hanger will be removed. The pliers will stay in your inventory.
+      public void CraftObject2(){
+            InventoryAdd("item6"); // sample inventory item to be added, needs supporting UI images
+            InventoryRemove("item3", 1); // sample inventory items to be removed, item3 is the inventory
+      }
+
 
       // Reset all static inventory values on game restart.
       public void ResetAllInventory(){
