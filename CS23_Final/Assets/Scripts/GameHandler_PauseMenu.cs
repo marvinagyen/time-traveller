@@ -27,7 +27,7 @@ public class GameHandler_PauseMenu : MonoBehaviour {
         }
 
         void Update (){
-                if (Input.GetKeyDown(KeyCode.Escape)){
+                if (Input.GetKeyDown(KeyCode.Q)){
                         Debug.Log("escapeee");
                         if (GameisPaused){
                                 Resume();
