@@ -12,6 +12,7 @@ TagManager:
   - future
   - PauseMenuSlider
   - Checkpoint
+  - enemy
   layers:
   - Default
   - TransparentFX

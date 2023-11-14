@@ -14,6 +14,7 @@ public class PlayerMove_2 : MonoBehaviour
     public float startSpeed = 10f;
     public bool isAlive = true;
     public bool canTimeTravel = false;
+    private Vector3 respawnPoint;
     //public GameObject past;
     //public GameObject present;
     //public GameObject future;
@@ -27,6 +28,7 @@ public class PlayerMove_2 : MonoBehaviour
     void Start()
     { 
         rb2D = transform.GetComponent<Rigidbody2D>();
+        respawnPoint = transform.position;
 
     }
 
@@ -119,6 +121,16 @@ public class PlayerMove_2 : MonoBehaviour
             Destroy(other.gameObject);
             canTimeTravel = true;
         }
+    }
+
+       void OnTriggerEnter2D (Collider2D collision) {
+        if (collision.tag == "enemy") {
+            transform.position = respawnPoint;
+        }
+        else if (collision.tag == "Checkpoint") {
+
+            respawnPoint = transform.position;
+            }
     }
 }
 

@@ -26,8 +26,12 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void OnTriggerEnter2D (Collider2D collision) {
-        if (collision.tag == "Checkpoint") {
+        if (collision.tag == "enemy") {
             transform.position = respawnPoint;
         }
+        else if (collision.tag == "Checkpoint") {
+
+            respawnPoint = transform.position;
+            }
     }
 }
