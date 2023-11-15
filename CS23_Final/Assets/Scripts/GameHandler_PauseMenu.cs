@@ -33,12 +33,14 @@ public class GameHandler_PauseMenu : MonoBehaviour {
                                 Resume();
                         }
                         else{
+                                Debug.Log("Pausing!");
                                 Pause();
                         }
                 }
         }
 
         void Pause(){
+                Debug.Log(pauseMenuUI);
                 pauseMenuUI.SetActive(true);
                 Time.timeScale = 0f;
                 GameisPaused = true;
