@@ -116,10 +116,11 @@ public class PlayerMove_2 : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "watch")
-        {
-            Destroy(other.gameObject);
+        if (other.gameObject.tag == "watch"){
             canTimeTravel = true;
+            GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear();
+            Destroy(other.gameObject);
+           
         }
     }
 

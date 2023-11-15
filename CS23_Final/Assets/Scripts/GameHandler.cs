@@ -93,10 +93,12 @@ public class GameHandler : MonoBehaviour {
             SceneManager.LoadScene("Credits");
       }
 
+    /*
     public void Update()
     {
         makeMessagesAppear();
     }
+    */
 
     public void goToPast()
 {
@@ -120,34 +122,29 @@ public void goToPresent()
     future_player.SetActive(false);
 }
 
-public void goToFuture()
-{
-    past.SetActive(false);
-    present.SetActive(false);
-    future.SetActive(true);
-
-    past_player.SetActive(false);
-    present_player.SetActive(false);
-    future_player.SetActive(true);
-}
-
-public void closeTextButton()
-{
-        Debug.Log("text");
-        textButton.SetActive(false);
-}
-
-void makeMessagesAppear()
-{
-    if (player.GetComponent<PlayerMove_2>().canTimeTravel)
+    public void goToFuture()
     {
-        textButton.SetActive(true);
+        past.SetActive(false);
+        present.SetActive(false);
+        future.SetActive(true);
+
+        past_player.SetActive(false);
+        present_player.SetActive(false);
+        future_player.SetActive(true);
     }
-    else
+
+    public void closeTextButton() { 
+            textButton.SetActive(false);
+            Debug.Log("text");
+        }
+
+    public void makeMessagesAppear()
     {
-        textButton.SetActive(false);
+        if (player.GetComponent<PlayerMove_2>().canTimeTravel)
+        {
+            textButton.SetActive(true);
+        }
     }
-}
 }
 
 // public class GameHandler : MonoBehaviour
