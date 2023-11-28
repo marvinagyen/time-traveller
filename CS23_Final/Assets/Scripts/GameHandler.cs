@@ -94,12 +94,45 @@ public class GameHandler : MonoBehaviour {
         SceneManager.LoadScene("Credits");
         }
 
-    /*
+    
     public void Update()
     {
-        makeMessagesAppear();
+        // FOR CHANGING SCENES
+        if (GameObject.FindWithTag("Player").GetComponent<PlayerMove_2>().canTimeTravel)
+        {
+            if (Input.GetKeyDown("1"))
+            {
+                past.SetActive(true);
+                present.SetActive(false);
+                future.SetActive(false);
+
+                past_player.SetActive(true);
+                present_player.SetActive(false);
+                future_player.SetActive(false);
+            }
+            if (Input.GetKeyDown("2"))
+            {
+                past.SetActive(false);
+                present.SetActive(true);
+                future.SetActive(false);
+
+                past_player.SetActive(false);
+                present_player.SetActive(true);
+                future_player.SetActive(false);
+            }
+            if (Input.GetKeyDown("3"))
+            {
+                past.SetActive(false);
+                present.SetActive(false);
+                future.SetActive(true);
+
+                past_player.SetActive(false);
+                present_player.SetActive(false);
+                future_player.SetActive(true);
+            }
+        }
     }
-    */
+
 
     public void goToPast(){
         past.SetActive(true);
