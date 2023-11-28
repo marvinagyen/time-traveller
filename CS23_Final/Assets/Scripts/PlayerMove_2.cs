@@ -8,6 +8,8 @@ public class PlayerMove_2 : MonoBehaviour
     //private int rangeEnd;
     //public Animator anim;
     //public AudioSource WalkSFX;
+
+
     private Rigidbody2D rb2D;
     private bool FaceRight = true; // determine which way player is facing.
     public static float runSpeed = 10f;
@@ -15,13 +17,9 @@ public class PlayerMove_2 : MonoBehaviour
     public bool isAlive = true;
     public bool canTimeTravel = false;
     private Vector3 respawnPoint;
-    //public GameObject past;
-    //public GameObject present;
-    //public GameObject future;
 
-    //public GameObject past_player;
-    //public GameObject present_player;
-    //public GameObject future_player;
+    public bool hasWatchKey = false;
+ 
 
     public GameObject timeTravelButtons;
 
@@ -121,6 +119,29 @@ public class PlayerMove_2 : MonoBehaviour
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear();
             Destroy(other.gameObject);
            
+        }
+
+        if (other.gameObject.tag == "watchWall")
+        {
+            Debug.Log("test wall hit");
+
+            if (hasWatchKey)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                //make messages appear
+            }
+
+        }
+
+        if (other.gameObject.tag == "watchKey")
+        {
+            Debug.Log("pick up key test");
+            hasWatchKey = true;
+            
+
         }
     }
 

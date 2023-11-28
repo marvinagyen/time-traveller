@@ -13,6 +13,8 @@ TagManager:
   - PauseMenuSlider
   - Checkpoint
   - enemy
+  - watchWall
+  - watchKey
   layers:
   - Default
   - TransparentFX
