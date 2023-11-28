@@ -20,10 +20,6 @@ public class PlayerMove_2 : MonoBehaviour
 
     public bool hasWatchKey = false;
 
-    public GameObject watchMessageBox;
- 
-
-    //public GameObject timeTravelButtons;
     public GameObject watchWalls;
 
     void Start()
@@ -62,17 +58,9 @@ public class PlayerMove_2 : MonoBehaviour
                 playerTurn();
             }
         }
-
+        hasWatchKey = GameObject.FindWithTag("GameHandler").GetComponent<GameInventory>().hasWatchKey;
         
-      
 
-        //if (canTimeTravel)
-        //{
-        //    timeTravelButtons.SetActive(true);
-        //} else
-        //{
-        //    timeTravelButtons.SetActive(false);
-        //}
     }
 
 
@@ -107,18 +95,12 @@ public class PlayerMove_2 : MonoBehaviour
             }
             else
             {
-                watchMessageBox.SetActive(true);
+                GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().watchMessage.SetActive(true);
             }
 
         }
 
-        //if (other.gameObject.tag == "watchKey")
-        //{
-        //    Debug.Log("pick up key test");
-        //    hasWatchKey = true;
             
-
-        //}
     }
 
        void OnTriggerEnter2D (Collider2D collision) {

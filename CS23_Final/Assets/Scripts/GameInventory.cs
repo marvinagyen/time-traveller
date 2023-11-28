@@ -8,6 +8,7 @@ public class GameInventory : MonoBehaviour {
       public GameObject CraftMenu;
       public bool InvIsOpen = false;
       public bool CraftIsOpen = false;
+      public bool hasWatchKey = false;
       
       //CRAFTING
       public GameObject buttonCraft1; // DEVICE1
@@ -53,7 +54,7 @@ public class GameInventory : MonoBehaviour {
       }
 
       void InventoryDisplay(){
-        Debug.Log(item1bool);
+   
 
             if (item1bool == true) {item1image.SetActive(true);} else {item1image.SetActive(false);}
             if (item2bool == true) {item2image.SetActive(true);} else {item2image.SetActive(false);}
@@ -132,6 +133,10 @@ public class GameInventory : MonoBehaviour {
                     // Add any other intended effects
             }
             else { Debug.Log("This item does not exist to be removed"); }
+        if (item3num == 1)
+        {
+            hasWatchKey = true;
+        }
             InventoryDisplay();
       }
 
