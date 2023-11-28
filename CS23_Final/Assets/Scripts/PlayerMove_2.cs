@@ -22,6 +22,8 @@ public class PlayerMove_2 : MonoBehaviour
 
     public GameObject watchWalls;
 
+    public bool isOutside = false;
+
     void Start()
     { 
         rb2D = transform.GetComponent<Rigidbody2D>();
@@ -59,9 +61,17 @@ public class PlayerMove_2 : MonoBehaviour
             }
         }
         hasWatchKey = GameObject.FindWithTag("GameHandler").GetComponent<GameInventory>().hasWatchKey;
-        
 
-    }
+        void OnCollisionEnter2D(Collision2D other)
+        {
+            if (other.gameObject.tag == "outside")
+            {
+                isOutside = true;
+
+            }
+        }
+
+        }
 
 
 
