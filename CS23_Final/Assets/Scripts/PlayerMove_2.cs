@@ -19,6 +19,8 @@ public class PlayerMove_2 : MonoBehaviour
     private Vector3 respawnPoint;
 
     public bool hasWatchKey = false;
+
+    public GameObject watchMessageBox;
  
 
     //public GameObject timeTravelButtons;
@@ -28,6 +30,7 @@ public class PlayerMove_2 : MonoBehaviour
     { 
         rb2D = transform.GetComponent<Rigidbody2D>();
         respawnPoint = transform.position;
+        
 
     }
 
@@ -59,6 +62,8 @@ public class PlayerMove_2 : MonoBehaviour
                 playerTurn();
             }
         }
+
+        
       
 
         //if (canTimeTravel)
@@ -102,18 +107,18 @@ public class PlayerMove_2 : MonoBehaviour
             }
             else
             {
-                //make messages appear
+                watchMessageBox.SetActive(true);
             }
 
         }
 
-        if (other.gameObject.tag == "watchKey")
-        {
-            Debug.Log("pick up key test");
-            hasWatchKey = true;
+        //if (other.gameObject.tag == "watchKey")
+        //{
+        //    Debug.Log("pick up key test");
+        //    hasWatchKey = true;
             
 
-        }
+        //}
     }
 
        void OnTriggerEnter2D (Collider2D collision) {

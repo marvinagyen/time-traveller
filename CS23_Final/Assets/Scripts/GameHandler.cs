@@ -15,6 +15,7 @@ public class GameHandler : MonoBehaviour {
     public GameObject future_player;
 
     public GameObject textButton;
+    public GameObject watchMessage;
 
     private GameHandler_PauseMenu pause_Menu;
 
@@ -166,9 +167,10 @@ public class GameHandler : MonoBehaviour {
     }
 
     public void closeTextButton() { 
-            textButton.SetActive(false);
-            Debug.Log("text");
-        }
+        textButton.SetActive(false);
+        watchMessage.SetActive(false);
+        //Debug.Log("text");
+    }
 
     public void makeMessagesAppear()
     {

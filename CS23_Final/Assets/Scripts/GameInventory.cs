@@ -53,6 +53,8 @@ public class GameInventory : MonoBehaviour {
       }
 
       void InventoryDisplay(){
+        Debug.Log(item1bool);
+
             if (item1bool == true) {item1image.SetActive(true);} else {item1image.SetActive(false);}
             if (item2bool == true) {item2image.SetActive(true);} else {item2image.SetActive(false);}
             if (item3bool == true) {item3image.SetActive(true);} else {item3image.SetActive(false);}
@@ -79,7 +81,7 @@ public class GameInventory : MonoBehaviour {
             item5TextB.text = ("" + item5num);
 
             //Crafting buttons:
-            if ((item1num >= 3) && (item2num >= 1)){       // sample inventory items to be used
+            if ((item1num == 1) && (item2num == 1)){       // sample inventory items to be used
                   buttonCraft1.SetActive(true);
             }
             else { buttonCraft1.SetActive(false); }
@@ -154,8 +156,8 @@ public class GameInventory : MonoBehaviour {
 
 
       public void CraftObject1(){
-            InventoryAdd("item5"); // sample inventory item to be added, needs supporting UI images
-            InventoryRemove("item1", 3); InventoryRemove("item2",1); // sample inventory items to be removed
+            InventoryAdd("item3"); // sample inventory item to be added, needs supporting UI images
+            InventoryRemove("item1", 1); InventoryRemove("item2",1); // sample inventory items to be removed
       }
 
       // Craft Object 2 is for creating the lockpick. The hanger will be removed. The pliers will stay in your inventory.
