@@ -81,6 +81,7 @@ public class PlayerMove_2 : MonoBehaviour
         if (other.gameObject.tag == "watch"){
             canTimeTravel = true;
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear();
+            GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().progressBar1.SetActive(true);
             Destroy(other.gameObject);
            
         }

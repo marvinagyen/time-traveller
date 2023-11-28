@@ -17,6 +17,8 @@ public class GameHandler : MonoBehaviour {
     public GameObject textButton;
     public GameObject watchMessage;
 
+    public GameObject progressBar1;
+
     private GameHandler_PauseMenu pause_Menu;
 
     //public GameObject Player
