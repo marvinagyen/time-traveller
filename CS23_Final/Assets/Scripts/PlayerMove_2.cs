@@ -62,14 +62,7 @@ public class PlayerMove_2 : MonoBehaviour
         }
         hasWatchKey = GameObject.FindWithTag("GameHandler").GetComponent<GameInventory>().hasWatchKey;
 
-        void OnCollisionEnter2D(Collision2D other)
-        {
-            if (other.gameObject.tag == "outside")
-            {
-                isOutside = true;
-
-            }
-        }
+        
 
         }
 
@@ -111,7 +104,23 @@ public class PlayerMove_2 : MonoBehaviour
 
         }
 
-            
+        
+         if (other.gameObject.tag == "outside")
+         {
+            isOutside = true;
+            Debug.Log("outside");
+
+         }
+        if (other.gameObject.tag == "inside")
+        {
+            isOutside = false;
+            Debug.Log("inside");
+
+        }
+
+
+
+
     }
 
        void OnTriggerEnter2D (Collider2D collision) {
