@@ -22,6 +22,7 @@ public class PlayerMove_2 : MonoBehaviour
  
 
     public GameObject timeTravelButtons;
+    public GameObject watchWalls;
 
     void Start()
     { 
@@ -127,7 +128,7 @@ public class PlayerMove_2 : MonoBehaviour
 
             if (hasWatchKey)
             {
-                Destroy(other.gameObject);
+                watchWalls.SetActive(false);
             }
             else
             {
