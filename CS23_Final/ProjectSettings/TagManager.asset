@@ -15,8 +15,6 @@ TagManager:
   - enemy
   - watchWall
   - watchKey
-  - outside
-  - inside
   layers:
   - Default
   - TransparentFX
