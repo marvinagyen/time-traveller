@@ -16,6 +16,11 @@ public class GameHandler : MonoBehaviour {
 
     public GameObject textButton;
     public GameObject watchMessage;
+    public GameObject poisonMessage;
+
+    public bool isPast = false;
+    public bool isPresent = true;
+    public bool isFuture = false;
 
     public GameObject progressBar1;
 
@@ -39,6 +44,8 @@ public class GameHandler : MonoBehaviour {
         //}
 
         textButton.SetActive(false);
+        watchMessage.SetActive(false);
+        poisonMessage.SetActive(false);
 
         past.SetActive(false);
         present.SetActive(true);
@@ -139,6 +146,10 @@ public class GameHandler : MonoBehaviour {
 
 
     public void goToPast(){
+        isPast = true;
+        isPresent = false;
+        isFuture = false;
+
         past.SetActive(true);
         present.SetActive(false);
         future.SetActive(false);
@@ -149,6 +160,11 @@ public class GameHandler : MonoBehaviour {
     }
 
     public void goToPresent(){
+
+        isPast = false;
+        isPresent = true;
+        isFuture = false;
+
         past.SetActive(false);
         present.SetActive(true);
         future.SetActive(false);
@@ -160,6 +176,11 @@ public class GameHandler : MonoBehaviour {
 
     public void goToFuture()
     {
+
+        isPast = false;
+        isPresent = false;
+        isFuture = true;
+
         past.SetActive(false);
         present.SetActive(false);
         future.SetActive(true);
@@ -169,9 +190,11 @@ public class GameHandler : MonoBehaviour {
         future_player.SetActive(true);
     }
 
-    public void closeTextButton() { 
+    public void closeTextButton() {
+
         textButton.SetActive(false);
         watchMessage.SetActive(false);
+        poisonMessage.SetActive(false);
         //Debug.Log("text");
     }
 
@@ -183,93 +206,3 @@ public class GameHandler : MonoBehaviour {
         }
     }
 }
-
-// public class GameHandler : MonoBehaviour
-// {
-//     public GameObject past;
-//     public GameObject present;
-//     public GameObject future;
-
-//     public GameObject past_player;
-//     public GameObject present_player;
-//     public GameObject future_player;
-
-//     public GameObject textButton;
-
-//     public GameObject Player;
-
-
-
-//     // Start is called before the first frame update
-//     void Start()
-//     {
-//         textButton.SetActive(false);
-
-//         past.SetActive(false);
-//         present.SetActive(true);
-//         future.SetActive(false);
-
-//         past_player.SetActive(false);
-//         present_player.SetActive(true);
-//         future_player.SetActive(false);
-
-//     }
-
-//     // Update is called once per frame
-//     void Update()
-//     {
-
-//         makeMessagesAppear();
-
-
-//     }
-
-//     public void goToPast()
-//     {
-//         past.SetActive(true);
-//         present.SetActive(false);
-//         future.SetActive(false);
-
-//         past_player.SetActive(true);
-//         present_player.SetActive(false);
-//         future_player.SetActive(false);
-//     }
-
-//     public void goToPresent()
-//     {
-//         past.SetActive(false);
-//         present.SetActive(true);
-//         future.SetActive(false);
-
-//         past_player.SetActive(false);
-//         present_player.SetActive(true);
-//         future_player.SetActive(false);
-//     }
-
-//     public void goToFuture()
-//     {
-//         past.SetActive(false);
-//         present.SetActive(false);
-//         future.SetActive(true);
-
-//         past_player.SetActive(false);
-//         present_player.SetActive(false);
-//         future_player.SetActive(true);
-//     }
-
-//     public void closeTextButton()
-//     {
-//         textButton.SetActive(false);
-//     }
-
-//     void makeMessagesAppear()
-//     {
-//         if (Player.GetComponent<PlayerMove_2>().canTimeTravel)
-//         {
-//             textButton.SetActive(true);
-//         } else
-//         {
-//             textButton.SetActive(false);
-//         }
-//     }
-// }
