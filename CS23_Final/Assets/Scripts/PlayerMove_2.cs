@@ -98,6 +98,8 @@ public class PlayerMove_2 : MonoBehaviour
             if (hasWatchKey)
             {
                 watchWalls.SetActive(false);
+                GameObject.FindWithTag("GameHandler").GetComponent<GameInventory>().InventoryRemove("item3", 1);
+
             }
             else
             {

@@ -115,10 +115,7 @@ public class GameHandler : MonoBehaviour {
             }
             if (Input.GetKeyDown("2"))
             {
-                if (player.GetComponent<PlayerMove_2>().isOutside)
-                {
-                    Debug.Log("test outside");
-                }
+            
                 past.SetActive(false);
                 present.SetActive(true);
                 future.SetActive(false);
