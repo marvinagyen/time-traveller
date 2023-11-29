@@ -24,6 +24,8 @@ public class PlayerMove_2 : MonoBehaviour
 
     public bool isOutside = false;
 
+    public AudioSource doorjiggle;
+
     void Start()
     { 
         rb2D = transform.GetComponent<Rigidbody2D>();
@@ -100,6 +102,7 @@ public class PlayerMove_2 : MonoBehaviour
             else
             {
                 GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().watchMessage.SetActive(true);
+                doorjiggle.Play(0);
             }
 
         }
