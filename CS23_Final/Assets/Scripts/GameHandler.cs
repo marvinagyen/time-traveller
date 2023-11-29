@@ -18,6 +18,9 @@ public class GameHandler : MonoBehaviour {
     public GameObject watchMessage;
     public GameObject poisonMessage;
 
+    public GameObject future_pot;
+    public GameObject flower_pot;
+
     public bool isPast = false;
     public bool isPresent = true;
     public bool isFuture = false;
@@ -54,6 +57,12 @@ public class GameHandler : MonoBehaviour {
         past_player.SetActive(false);
         present_player.SetActive(true);
         future_player.SetActive(false);
+
+        future_pot.SetActive(true);
+        flower_pot.SetActive(false);
+
+   
+
     }
 
     public void playerDies(){
