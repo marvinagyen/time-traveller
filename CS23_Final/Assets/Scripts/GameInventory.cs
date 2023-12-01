@@ -11,10 +11,11 @@ public class GameInventory : MonoBehaviour {
       public bool hasWatchKey = false;
       
       //CRAFTING
-      public GameObject buttonCraft1; // DEVICE1
+      public GameObject buttonCraft1; // hanger+pliers=key
+      public GameObject buttonCraft2; // bottle+flower=poison
 
-      //5 Inventory Items:
-      public static bool item1bool = false;
+    //5 Inventory Items:
+    public static bool item1bool = false;
       public static bool item2bool = false;
       public static bool item3bool = false;
       public static bool item4bool = false;
@@ -63,7 +64,8 @@ public class GameInventory : MonoBehaviour {
             //CraftMenu.SetActive(false);
             InventoryDisplay();
             buttonCraft1.SetActive(false);
-      }
+            buttonCraft2.SetActive(false);
+    }
 
       void InventoryDisplay(){
    
@@ -111,8 +113,14 @@ public class GameInventory : MonoBehaviour {
             }
             else { buttonCraft1.SetActive(false); }
 
+        if ((item1num == 4) && (item2num == 6))
+        {       // sample inventory items to be used
+            buttonCraft2.SetActive(true);
+        }
+        else { buttonCraft2.SetActive(false); }
 
-      }
+
+    }
 
       public void InventoryAdd(string item){
             string foundItemName = item;
@@ -208,7 +216,7 @@ public class GameInventory : MonoBehaviour {
       public void CraftObject1(){
             //hanger/plier craft
             InventoryAdd("item3"); // sample inventory item to be added, needs supporting UI images
-            InventoryRemove("item1", 1); // sample inventory items to be removed
+            InventoryRemove("item2", 1); // sample inventory items to be removed
       }
 
       // Craft Object 2 is for creating the lockpick.

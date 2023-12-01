@@ -15,6 +15,9 @@ TagManager:
   - enemy
   - watchWall
   - watchKey
+  - pot_present
+  - pot_past
+  - pot_future
   layers:
   - Default
   - TransparentFX

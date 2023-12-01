@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameHandler : MonoBehaviour {
 
@@ -17,6 +18,8 @@ public class GameHandler : MonoBehaviour {
     public GameObject textButton;
     public GameObject watchMessage;
     public GameObject poisonMessage;
+
+    public TextMeshPro msgtxt;
 
     public GameObject future_pot;
     public GameObject flower_pot;

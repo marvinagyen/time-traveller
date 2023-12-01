@@ -109,19 +109,24 @@ public class PlayerMove_2 : MonoBehaviour
 
         }
 
-        
-         if (other.gameObject.tag == "outside")
-         {
-            isOutside = true;
-            Debug.Log("outside");
-
-         }
-        if (other.gameObject.tag == "inside")
+        if (other.gameObject.tag == "pot_past")
         {
-            isOutside = false;
-            Debug.Log("inside");
-
+            //"What good is a pot if there is no soil in it?
         }
+
+        if (other.gameObject.tag == "pot_present")
+        {
+            //if no seed:
+            //if seed:
+        }
+
+        if (other.gameObject.tag == "pot_future")
+        {
+            //if seed hasn't been planted
+            //if seed has been
+        }
+
+
 
 
 

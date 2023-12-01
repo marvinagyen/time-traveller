@@ -1033,9 +1033,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 608230462}
+  - component: {fileID: 608230463}
   m_Layer: 0
   m_Name: pot
-  m_TagString: Untagged
+  m_TagString: pot_future
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1057,6 +1058,51 @@ Transform:
   m_Father: {fileID: 7760842771769076231}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &608230463
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608230461}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -19.215313, y: -12.581945}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.5290833, y: 2.5984764}
+  m_EdgeRadius: 0
 --- !u!1 &655770931
 GameObject:
   m_ObjectHideFlags: 0
@@ -2053,7 +2099,7 @@ GameObject:
   - component: {fileID: 1062600302}
   - component: {fileID: 1062600301}
   m_Layer: 5
-  m_Name: Craft_Formula (1)
+  m_Name: Craft_Formula 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2426,7 +2472,7 @@ GameObject:
   - component: {fileID: 1220698598}
   m_Layer: 0
   m_Name: pot_no_soil
-  m_TagString: Untagged
+  m_TagString: pot_past
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2843,6 +2889,10 @@ PrefabInstance:
       propertyPath: item8image
       value: 
       objectReference: {fileID: 1330818927}
+    - target: {fileID: 1515803375302790683, guid: e131d53c238e247febf51e6cb1e1424a, type: 3}
+      propertyPath: buttonCraft2
+      value: 
+      objectReference: {fileID: 344121041}
     - target: {fileID: 1701123023065696232, guid: e131d53c238e247febf51e6cb1e1424a, type: 3}
       propertyPath: m_SizeDelta.x
       value: 150
@@ -3033,7 +3083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6299156996769211906, guid: e131d53c238e247febf51e6cb1e1424a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6390335805619576644, guid: e131d53c238e247febf51e6cb1e1424a, type: 3}
       propertyPath: m_Sprite
@@ -3068,6 +3118,10 @@ PrefabInstance:
       value: poison_bottle
       objectReference: {fileID: 0}
     - target: {fileID: 7255664440292792725, guid: e131d53c238e247febf51e6cb1e1424a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346011705178973091, guid: e131d53c238e247febf51e6cb1e1424a, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -3617,7 +3671,7 @@ GameObject:
   - component: {fileID: 1498842890}
   m_Layer: 0
   m_Name: pot
-  m_TagString: Untagged
+  m_TagString: pot_present
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4553,9 +4607,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1909197105}
+  - component: {fileID: 1909197106}
   m_Layer: 0
   m_Name: pot
-  m_TagString: Untagged
+  m_TagString: pot_past
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4576,6 +4631,51 @@ Transform:
   m_Father: {fileID: 1612847420}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1909197106
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909197104}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -19.215385, y: -12.563265}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.5545654, y: 2.6038208}
+  m_EdgeRadius: 0
 --- !u!1 &1914977866 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6299156996769211906, guid: e131d53c238e247febf51e6cb1e1424a, type: 3}
