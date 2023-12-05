@@ -10,7 +10,7 @@ public class LaserController : MonoBehaviour {
       public bool killEnemy = true;
 
        private GameHandler gameHandlerObj;
-       public PlayerMovement playerMovement;
+       public PlayerMove_2 playerMovement;
 
        // ignore these variables public so that it is easier to access them as they are on children
        public LineRenderer leftLaser, rightLaser, topLaser, botLaser;
@@ -18,7 +18,7 @@ public class LaserController : MonoBehaviour {
        private Transform leftTrans, rightTrans, topTrans, botTrans;
 
        void Start(){
-                playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove_2>();
               leftLaser.enabled = rightLaser.enabled = topLaser.enabled = botLaser.enabled = true;
               leftLaser.useWorldSpace = rightLaser.useWorldSpace = true;
               topLaser.useWorldSpace = botLaser.useWorldSpace = true;
@@ -35,10 +35,6 @@ public class LaserController : MonoBehaviour {
         }
 
        void Update(){
-              if (!activated){ // if not activated do nothing
-                        leftLaser.enabled = rightLaser.enabled = topLaser.enabled = botLaser.enabled = false;
-                        return;
-              }
 
               RaycastHit2D hit; // point where laser hits
 

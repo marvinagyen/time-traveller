@@ -20,7 +20,7 @@ public class PlayerMove_2 : MonoBehaviour
     public bool hasSeed = false;
     public bool beenPlanted = false;
    
-    private Vector3 respawnPoint;
+    public Vector3 respawnPoint;
 
     public bool hasWatchKey = false;
 
