@@ -10,6 +10,7 @@ public class LaserController : MonoBehaviour {
       public bool killEnemy = true;
 
        private GameHandler gameHandlerObj;
+       public PlayerMovement playerMovement;
 
        // ignore these variables public so that it is easier to access them as they are on children
        public LineRenderer leftLaser, rightLaser, topLaser, botLaser;
@@ -17,6 +18,7 @@ public class LaserController : MonoBehaviour {
        private Transform leftTrans, rightTrans, topTrans, botTrans;
 
        void Start(){
+                playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
               leftLaser.enabled = rightLaser.enabled = topLaser.enabled = botLaser.enabled = true;
               leftLaser.useWorldSpace = rightLaser.useWorldSpace = true;
               topLaser.useWorldSpace = botLaser.useWorldSpace = true;
@@ -48,11 +50,8 @@ public class LaserController : MonoBehaviour {
                      leftLaser.SetPosition(0, leftTrans.position);
                      leftLaser.SetPosition(1, hitPoint.position);
                      // laser kills enemies and does constant damage to player, by a lot
-                     if (hit.transform.CompareTag("Player") && laserDamage > 0){
-                           //  gameHandlerObj.playerGetHit(laserDamage);
-                     }
-                     else if ((hit.transform.CompareTag("Enemy")) && (killEnemy==true)){
-                             Destroy(hit.transform.gameObject);
+                     if (hit.transform.CompareTag("Player")){
+                             playerMovement.transform.position = playerMovement.respawnPoint;
                      }
               }
               else {
@@ -68,12 +67,10 @@ public class LaserController : MonoBehaviour {
                       rightLaser.SetPosition(0, rightTrans.position);
                       rightLaser.SetPosition(1, hitPoint.position);
                       // laser kills enemies and does constant damage to player, by a lot
-                      if (hit.transform.CompareTag("Player") && laserDamage > 0){
-                               // gameHandlerObj.playerGetHit(laserDamage);
+                      if (hit.transform.CompareTag("Player")){
+                               playerMovement.transform.position = playerMovement.respawnPoint;
                       }
-                      else if ((hit.transform.CompareTag("Enemy")) && (killEnemy==true)){
-                                Destroy(hit.transform.gameObject);
-                      }
+
               }
               else {
                       rightLaser.enabled = false;
@@ -88,12 +85,10 @@ public class LaserController : MonoBehaviour {
                       topLaser.SetPosition(0, topTrans.position);
                       topLaser.SetPosition(1, hitPoint.position);
                      // laser kills enemies and does constant damage to player, by a lot
-                     if (hit.transform.CompareTag("Player") && laserDamage > 0) {
-                               // gameHandlerObj.playerGetHit(laserDamage);
+                     if (hit.transform.CompareTag("Player")) {
+                             playerMovement.transform.position = playerMovement.respawnPoint;
                       }
-                      else if ((hit.transform.CompareTag("Enemy")) && (killEnemy==true)){
-                                Destroy(hit.transform.gameObject);
-                      }
+
               }
               else {
                       topLaser.enabled = false;
@@ -108,15 +103,15 @@ public class LaserController : MonoBehaviour {
                       botLaser.SetPosition(0, botTrans.position);
                       botLaser.SetPosition(1, hitPoint.position);
                       // laser kills enemies and does constant damage to player, by a lot
-                      if (hit.transform.CompareTag("Player") && laserDamage > 0){
-                                //gameHandlerObj.playerGetHit(laserDamage);
-                      }
-                      else if ((hit.transform.CompareTag("Enemy")) && (killEnemy==true)){
-                                Destroy(hit.transform.gameObject);
+                      if (hit.transform.CompareTag("Player")){
+                                Debug.Log("C");
+                                playerMovement.transform.position = playerMovement.respawnPoint;
                       }
               }
               else {
                       botLaser.enabled = false;
               }
         }
+
+        
 }

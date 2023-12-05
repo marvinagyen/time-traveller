@@ -7,7 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     Vector2 movement;
-    private Vector3 respawnPoint;
+    public Vector3 respawnPoint;
+    
 
     // Update is called once per frame
     void Start () {
@@ -26,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void OnTriggerEnter2D (Collider2D collision) {
-        if (collision.tag == "enemy") {
+        if (collision.tag == "enemy" ) {
             transform.position = respawnPoint;
         }
         else if (collision.tag == "Checkpoint") {

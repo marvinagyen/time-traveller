@@ -7,6 +7,7 @@ public class NPC_PatrolSequencePoints : MonoBehaviour {
        public float speed = 10f;
        private float waitTime;
        public float startWaitTime = 2f;
+       public int Respawn;
 
        public Transform[] moveSpots;
        public int startSpot = 0;
