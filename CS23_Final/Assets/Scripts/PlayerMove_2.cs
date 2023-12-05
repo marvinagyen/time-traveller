@@ -80,7 +80,7 @@ public class PlayerMove_2 : MonoBehaviour
                 string message = "Exciting! I wonder how long it might take to grow";
                 GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
                 GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().future_pot_w_flower.SetActive(true);
-                GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().future_pot.SetActive(true);
+                GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().future_pot.SetActive(false);
 
             }
         }
