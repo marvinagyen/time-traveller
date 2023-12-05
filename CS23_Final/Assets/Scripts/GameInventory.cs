@@ -119,7 +119,10 @@ public class GameInventory : MonoBehaviour {
         }
         else { buttonCraft2.SetActive(false); }
 
-
+        if (item5num > 0)
+        {
+            GameObject.FindWithTag("Player").GetComponent<PlayerMove_2>().hasSeed = true;
+        }
     }
 
       public void InventoryAdd(string item){
@@ -217,13 +220,16 @@ public class GameInventory : MonoBehaviour {
             //hanger/plier craft
             InventoryAdd("item3"); // sample inventory item to be added, needs supporting UI images
             InventoryRemove("item2", 1); // sample inventory items to be removed
+            OpenCloseCraftBook();
       }
 
       // Craft Object 2 is for creating the lockpick.
       public void CraftObject2(){
             InventoryAdd("item7"); // sample inventory item to be added, needs supporting UI images
             InventoryRemove("item4", 1); InventoryRemove("item6", 1); // sample inventory items to be removed, item3 is the inventory
-            GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().poisonMessage.SetActive(true);
+            string message = "Yikes!! That poison looks deadly!\nI wouldn't wish that on my worst enemies!\nOr maybe I would...";
+            GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
+            OpenCloseCraftBook();
     }
 
 

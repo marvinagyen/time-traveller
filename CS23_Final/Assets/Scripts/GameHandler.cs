@@ -16,8 +16,6 @@ public class GameHandler : MonoBehaviour {
     public GameObject future_player;
 
     public GameObject textButton;
-    public GameObject watchMessage;
-    public GameObject poisonMessage;
 
     public TextMeshProUGUI msgtxt;
 
@@ -32,7 +30,7 @@ public class GameHandler : MonoBehaviour {
 
     private GameHandler_PauseMenu pause_Menu;
 
-    //public GameObject Player
+    public GameObject future_pot_w_flower;
 
 
     private GameObject player;
@@ -50,8 +48,6 @@ public class GameHandler : MonoBehaviour {
         //}
 
         textButton.SetActive(false);
-        watchMessage.SetActive(false);
-        poisonMessage.SetActive(false);
 
         past.SetActive(false);
         present.SetActive(true);
@@ -63,8 +59,9 @@ public class GameHandler : MonoBehaviour {
 
         future_pot.SetActive(true);
         flower_pot.SetActive(false);
+        future_pot_w_flower.SetActive(false);
 
-   
+
 
     }
 
@@ -205,16 +202,16 @@ public class GameHandler : MonoBehaviour {
     public void closeTextButton() {
 
         textButton.SetActive(false);
-        watchMessage.SetActive(false);
-        poisonMessage.SetActive(false);
         //Debug.Log("text");
     }
 
-    public void makeMessagesAppear()
+    public void makeMessagesAppear(string message)
     {
-        if (player.GetComponent<PlayerMove_2>().canTimeTravel)
-        {
-            textButton.SetActive(true);
-        }
+        msgtxt.text = message;
+        textButton.SetActive(true);
+        //if (player.GetComponent<PlayerMove_2>().canTimeTravel)
+        //{
+        //    textButton.SetActive(true);
+        //}
     }
 }

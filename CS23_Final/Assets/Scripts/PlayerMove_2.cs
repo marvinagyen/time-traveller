@@ -16,6 +16,10 @@ public class PlayerMove_2 : MonoBehaviour
     public float startSpeed = 10f;
     public bool isAlive = true;
     public bool canTimeTravel = false;
+
+    public bool hasSeed = false;
+    public bool beenPlanted = false;
+   
     private Vector3 respawnPoint;
 
     public bool hasWatchKey = false;
@@ -25,6 +29,10 @@ public class PlayerMove_2 : MonoBehaviour
     public bool isOutside = false;
 
     public AudioSource doorjiggle;
+
+    private bool Past;
+    private bool Present;
+    private bool Future;
 
     void Start()
     { 
@@ -64,7 +72,18 @@ public class PlayerMove_2 : MonoBehaviour
         }
         hasWatchKey = GameObject.FindWithTag("GameHandler").GetComponent<GameInventory>().hasWatchKey;
 
-        
+        Present = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().isPresent;
+        Future = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().isFuture;
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if(hasSeed && Present){
+                string message = "Exciting! I wonder how long it might take to grow";
+                GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
+                GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().future_pot_w_flower.SetActive(true);
+                GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().future_pot.SetActive(true);
+
+            }
+        }
 
         }
 
@@ -85,7 +104,8 @@ public class PlayerMove_2 : MonoBehaviour
     {
         if (other.gameObject.tag == "watch"){
             canTimeTravel = true;
-            GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear();
+            string message = "Woahhh... what's happening to me?? It feels like if you pressed 1, 2, or 3,\nsomething crazy might happen";
+            GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().progressBar1.SetActive(true);
             Destroy(other.gameObject);
            
@@ -103,7 +123,8 @@ public class PlayerMove_2 : MonoBehaviour
             }
             else
             {
-                GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().watchMessage.SetActive(true);
+                GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().msgtxt.text = "It looks like this door is locked...\nWait! A keyhole!\nMaybe I could fashion a key...";
+                GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().textButton.SetActive(true);
                 doorjiggle.Play(0);
             }
 
@@ -111,19 +132,36 @@ public class PlayerMove_2 : MonoBehaviour
 
         if (other.gameObject.tag == "pot_past")
         {
-            //"What good is a pot if there is no soil in it?
+            string message = "What good is a pot if there is no soil in it?";
+            GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
         }
 
         if (other.gameObject.tag == "pot_present")
         {
-            //if no seed:
-            //if seed:
+            string message;
+            if (hasSeed)
+            {
+                message = "Press P to plant!";
+            }
+            else
+            {
+                message = "Seems like this would be a great place to plant something...\nA seed perhaps?";
+            }
+            GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
         }
 
         if (other.gameObject.tag == "pot_future")
         {
-            //if seed hasn't been planted
-            //if seed has been
+            string message = "";
+            if (beenPlanted)
+            {
+                message = "What a beautiful flower! Press P to pick it!";
+            }
+            else
+            {
+                message = "This soil seems way too toxic to plant in!";
+            }
+            GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
         }
 
 
