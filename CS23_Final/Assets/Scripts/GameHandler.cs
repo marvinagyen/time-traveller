@@ -83,7 +83,7 @@ public class GameHandler : MonoBehaviour {
 
     // Loads the first scene in the game, will likely be first level
     public void StartGame() {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Official_scene_1");
     }
 
       // Return to MainMenu
