@@ -113,7 +113,7 @@ public class GameInventory : MonoBehaviour {
             }
             else { buttonCraft1.SetActive(false); }
 
-        if ((item1num == 4) && (item2num == 6))
+        if ((item4num == 1) && (item6num == 1))
         {       // sample inventory items to be used
             buttonCraft2.SetActive(true);
         }
@@ -227,7 +227,7 @@ public class GameInventory : MonoBehaviour {
       public void CraftObject2(){
             InventoryAdd("item7"); // sample inventory item to be added, needs supporting UI images
             InventoryRemove("item4", 1); InventoryRemove("item6", 1); // sample inventory items to be removed, item3 is the inventory
-            string message = "Yikes!! That poison looks deadly!\nI wouldn't wish that on my worst enemies!\nOr maybe I would...";
+            string message = "Yikes!! That poison looks deadly!\nI wouldn't wish that on my worst enemies! Or maybe I would...";
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
             OpenCloseCraftBook();
     }

@@ -21,6 +21,8 @@ public class GameHandler : MonoBehaviour {
 
     public GameObject future_pot;
     public GameObject flower_pot;
+    public GameObject future_pot_w_flower;
+    public GameObject picked_flower;
 
     public bool isPast = false;
     public bool isPresent = true;
@@ -30,7 +32,7 @@ public class GameHandler : MonoBehaviour {
 
     private GameHandler_PauseMenu pause_Menu;
 
-    public GameObject future_pot_w_flower;
+    
 
 
     private GameObject player;
@@ -60,6 +62,7 @@ public class GameHandler : MonoBehaviour {
         future_pot.SetActive(true);
         flower_pot.SetActive(false);
         future_pot_w_flower.SetActive(false);
+        picked_flower.SetActive(false);
 
 
 
@@ -121,34 +124,36 @@ public class GameHandler : MonoBehaviour {
         {
             if (Input.GetKeyDown("1"))
             {
-                past.SetActive(true);
-                present.SetActive(false);
-                future.SetActive(false);
+                goToPast();
+                //past.SetActive(true);
+                //present.SetActive(false);
+                //future.SetActive(false);
 
-                past_player.SetActive(true);
-                present_player.SetActive(false);
-                future_player.SetActive(false);
+                //past_player.SetActive(true);
+                //present_player.SetActive(false);
+                //future_player.SetActive(false);
             }
             if (Input.GetKeyDown("2"))
             {
-            
-                past.SetActive(false);
-                present.SetActive(true);
-                future.SetActive(false);
+                goToPresent();
+                //past.SetActive(false);
+                //present.SetActive(true);
+                //future.SetActive(false);
 
-                past_player.SetActive(false);
-                present_player.SetActive(true);
-                future_player.SetActive(false);
+                //past_player.SetActive(false);
+                //present_player.SetActive(true);
+                //future_player.SetActive(false);
             }
             if (Input.GetKeyDown("3"))
             {
-                past.SetActive(false);
-                present.SetActive(false);
-                future.SetActive(true);
+                goToFuture();
+                //past.SetActive(false);
+                //present.SetActive(false);
+                //future.SetActive(true);
 
-                past_player.SetActive(false);
-                present_player.SetActive(false);
-                future_player.SetActive(true);
+                //past_player.SetActive(false);
+                //present_player.SetActive(false);
+                //future_player.SetActive(true);
             }
         }
     }

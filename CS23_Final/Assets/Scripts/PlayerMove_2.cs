@@ -19,14 +19,13 @@ public class PlayerMove_2 : MonoBehaviour
 
     public bool hasSeed = false;
     public bool beenPlanted = false;
+    public bool beenPicked = false;
    
     public Vector3 respawnPoint;
 
     public bool hasWatchKey = false;
 
     public GameObject watchWalls;
-
-    public bool isOutside = false;
 
     public AudioSource doorjiggle;
 
@@ -74,13 +73,30 @@ public class PlayerMove_2 : MonoBehaviour
 
         Present = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().isPresent;
         Future = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().isFuture;
+        Past = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().isPast;
+
         if (Input.GetKeyDown(KeyCode.P))
         {
-            if(hasSeed && Present){
+         
+            if (hasSeed && Present){
                 string message = "Exciting! I wonder how long it might take to grow";
                 GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
                 GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().future_pot_w_flower.SetActive(true);
                 GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().future_pot.SetActive(false);
+                beenPlanted = true;
+                GameObject.FindWithTag("GameHandler").GetComponent<GameInventory>().InventoryRemove("item5", 1);
+
+            }
+
+            if(beenPlanted && Future && !beenPicked)
+            {
+                Debug.Log("in");
+                string message = "I bet I could make something really dangerous with this poison flower!";
+                GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
+                GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().future_pot_w_flower.SetActive(false);
+                GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().picked_flower.SetActive(true);
+                beenPicked = true;
+                GameObject.FindWithTag("GameHandler").GetComponent<GameInventory>().InventoryAdd("item6");
 
             }
         }
@@ -139,15 +155,18 @@ public class PlayerMove_2 : MonoBehaviour
         if (other.gameObject.tag == "pot_present")
         {
             string message;
-            if (hasSeed)
+            if (hasSeed && !beenPlanted)
             {
                 message = "Press P to plant!";
+                GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
+
             }
-            else
+            else if (!hasSeed)
             {
                 message = "Seems like this would be a great place to plant something...\nA seed perhaps?";
+                GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
+
             }
-            GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
         }
 
         if (other.gameObject.tag == "pot_future")
@@ -155,7 +174,11 @@ public class PlayerMove_2 : MonoBehaviour
             string message = "";
             if (beenPlanted)
             {
-                message = "What a beautiful flower! Press P to pick it!";
+                message = "Did the soil make the flower poisonous? Press P to pick it!";
+                if (beenPicked)
+                {
+                    message = "Seems like this plant has been\npicked already";
+                }
             }
             else
             {
