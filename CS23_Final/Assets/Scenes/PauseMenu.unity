@@ -500,6 +500,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5559080191651715627, guid: 45dcbbf7147d3415494f42f87346defc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 829222262423867630}
+    - target: {fileID: 5559080191651715627, guid: 45dcbbf7147d3415494f42f87346defc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
     - target: {fileID: 8376031947602481521, guid: 45dcbbf7147d3415494f42f87346defc, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -525,3 +533,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45dcbbf7147d3415494f42f87346defc, type: 3}
+--- !u!114 &829222262423867630 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2455718238686807450, guid: 45dcbbf7147d3415494f42f87346defc, type: 3}
+  m_PrefabInstance: {fileID: 829222262423867629}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287713871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c4796bab21964fc9947978fe86dfc6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
