@@ -36,6 +36,7 @@ public class GameHandler : MonoBehaviour {
 
 
     private GameObject player;
+    Vector3 originalPos;
 
     //public static bool stairCaseUnlocked = false;
     //this is a flag check. Add to other scripts: GameHandler.stairCaseUnlocked = true;
@@ -45,6 +46,7 @@ public class GameHandler : MonoBehaviour {
 
     void Start(){
         player = GameObject.FindWithTag("Player");
+        originalPos = player.transform.position;
         sceneName = SceneManager.GetActiveScene().name;
         //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
         //}
@@ -123,7 +125,10 @@ public class GameHandler : MonoBehaviour {
         if (GameObject.FindWithTag("Player").GetComponent<PlayerMove_2>().canTimeTravel)
         {
             if (Input.GetKeyDown("1"))
-            {
+            {   
+                if (isPresent == true) {
+                    originalPos = player.transform.position;
+                }
                 goToPast();
                 //past.SetActive(true);
                 //present.SetActive(false);
@@ -134,8 +139,9 @@ public class GameHandler : MonoBehaviour {
                 //future_player.SetActive(false);
             }
             if (Input.GetKeyDown("2"))
-            {
+            {   
                 goToPresent();
+                player.transform.position = originalPos;
                 //past.SetActive(false);
                 //present.SetActive(true);
                 //future.SetActive(false);
@@ -146,6 +152,9 @@ public class GameHandler : MonoBehaviour {
             }
             if (Input.GetKeyDown("3"))
             {
+                if (isPresent == true) {
+                    originalPos = player.transform.position;
+                }
                 goToFuture();
                 //past.SetActive(false);
                 //present.SetActive(false);
