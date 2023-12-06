@@ -1045,6 +1045,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4179566282893036034, guid: fcbabfb20cba64ef5a246afe21cff1c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5872234508270385193, guid: fcbabfb20cba64ef5a246afe21cff1c8, type: 3}
       propertyPath: m_Icon
       value: 
@@ -2109,7 +2113,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 12
   m_Sprite: {fileID: 0}
   m_Color: {r: 0.31132078, g: 0.083704166, b: 0.083704166, a: 1}
   m_FlipX: 0
