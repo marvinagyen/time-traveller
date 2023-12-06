@@ -147,7 +147,10 @@ public class GameHandler : MonoBehaviour {
             if (Input.GetKeyDown("2"))
             {   
                 goToPresent();
-                player.transform.position = originalPos;
+                if (player.transform.position.x > 30) {
+                    player.transform.position = originalPos;
+                }
+                
                 //past.SetActive(false);
                 //present.SetActive(true);
                 //future.SetActive(false);
