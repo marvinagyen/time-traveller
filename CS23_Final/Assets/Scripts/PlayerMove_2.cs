@@ -127,6 +127,14 @@ public class PlayerMove_2 : MonoBehaviour
            
         }
 
+        if (other.gameObject.tag == "time2")
+        {
+            GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().progressBar2.SetActive(true);
+            string message = "You found another piece of the time machine!";
+            GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
+            Destroy(other.gameObject);
+        }
+
         if (other.gameObject.tag == "watchWall")
         {
             Debug.Log("test wall hit");
@@ -182,7 +190,7 @@ public class PlayerMove_2 : MonoBehaviour
             }
             else
             {
-                message = "This soil seems way too toxic to plant in!";
+                message = "This soil seems way too toxic\nto plant in!";
             }
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
         }

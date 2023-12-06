@@ -29,6 +29,8 @@ public class GameHandler : MonoBehaviour {
     public bool isFuture = false;
 
     public GameObject progressBar1;
+    public GameObject progressBar2;
+    public GameObject progressBar3;
 
     private GameHandler_PauseMenu pause_Menu;
 
@@ -65,6 +67,10 @@ public class GameHandler : MonoBehaviour {
         flower_pot.SetActive(false);
         future_pot_w_flower.SetActive(false);
         picked_flower.SetActive(false);
+
+        progressBar1.SetActive(false);
+        progressBar2.SetActive(false);
+        progressBar3.SetActive(false);
 
 
 

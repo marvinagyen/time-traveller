@@ -19,6 +19,7 @@ TagManager:
   - pot_past
   - pot_future
   - laser
+  - time2
   layers:
   - Default
   - TransparentFX
