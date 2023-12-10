@@ -15,7 +15,8 @@ public class PlayerMove_2 : MonoBehaviour
     public static float runSpeed = 10f;
     public float startSpeed = 10f;
     public bool isAlive = true;
-    public bool canTimeTravel = false;
+    //CHANGE BEFORE DONE THIS IS JUST TO MAKE BUILDING EASIER
+    public bool canTimeTravel = true;
 
     public bool hasSeed = false;
     public bool beenPlanted = false;
@@ -32,6 +33,8 @@ public class PlayerMove_2 : MonoBehaviour
     private bool Past;
     private bool Present;
     private bool Future;
+
+    public int deathCount = 0;
 
     void Start()
     { 
@@ -205,6 +208,13 @@ public class PlayerMove_2 : MonoBehaviour
        void OnTriggerEnter2D (Collider2D collision) {
         if (collision.tag == "enemy") {
             transform.position = respawnPoint;
+            deathCount++;
+
+            if (deathCount == 1)
+            {
+                string message = "Eek! These scientists are dangerous!\nI better not get too close.";
+                GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
+            }
         }
         else if (collision.tag == "Checkpoint") {
 
