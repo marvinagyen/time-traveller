@@ -20,6 +20,7 @@ TagManager:
   - pot_future
   - laser
   - time2
+  - Crate
   layers:
   - Default
   - TransparentFX
