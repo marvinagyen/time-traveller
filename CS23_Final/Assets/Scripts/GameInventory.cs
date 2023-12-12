@@ -16,6 +16,7 @@ public class GameInventory : MonoBehaviour {
       //CRAFTING
       public GameObject buttonCraft1; // hanger+pliers=key
       public GameObject buttonCraft2; // bottle+flower=poison
+      public AudioSource crafting_sound;
 
     //5 Inventory Items:
     public static bool item1bool = false;
@@ -227,6 +228,7 @@ public class GameInventory : MonoBehaviour {
 
       public void CraftObject1(){
             //hanger/plier craft
+            crafting_sound.Play(0);
             InventoryAdd("item3"); // sample inventory item to be added, needs supporting UI images
             InventoryRemove("item2", 1); // sample inventory items to be removed
             OpenCloseCraftBook();
@@ -234,6 +236,7 @@ public class GameInventory : MonoBehaviour {
 
       // Craft Object 2 is for creating the lockpick.
       public void CraftObject2(){
+            crafting_sound.Play(0);
             InventoryAdd("item7"); // sample inventory item to be added, needs supporting UI images
             InventoryRemove("item4", 1); InventoryRemove("item6", 1); // sample inventory items to be removed, item3 is the inventory
             string message = "Yikes!! That poison looks deadly!\nI wouldn't wish that on my worst enemies! Or maybe I would...";
