@@ -9,6 +9,9 @@ public class GameInventory : MonoBehaviour {
       public bool InvIsOpen = false;
       public bool CraftIsOpen = false;
       public bool hasWatchKey = false;
+
+      public AudioSource inventoryOpen;
+      public AudioSource inventoryClose;
       
       //CRAFTING
       public GameObject buttonCraft1; // hanger+pliers=key
@@ -203,8 +206,14 @@ public class GameInventory : MonoBehaviour {
 
       // Open and Close the Inventory. Use this function on a button next to the inventory bar.
       public void OpenCloseInventory(){
-            if (InvIsOpen){ InventoryMenu.SetActive(false); }
-            else { InventoryMenu.SetActive(true); }
+            if (InvIsOpen) { 
+                InventoryMenu.SetActive(false);
+                inventoryClose.Play(0);
+
+            } else { 
+                InventoryMenu.SetActive(true);
+                inventoryOpen.Play(0);
+            }
             InvIsOpen = !InvIsOpen;
       }
 
