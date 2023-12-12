@@ -29,6 +29,7 @@ public class PlayerMove_2 : MonoBehaviour
     public GameObject watchWalls;
 
     public AudioSource doorjiggle;
+    public AudioSource doorOpened;
 
     private bool Past;
     private bool Present;
@@ -146,6 +147,7 @@ public class PlayerMove_2 : MonoBehaviour
             {
                 watchWalls.SetActive(false);
                 GameObject.FindWithTag("GameHandler").GetComponent<GameInventory>().InventoryRemove("item3", 1);
+                doorOpened.Play(0);
 
             }
             else
