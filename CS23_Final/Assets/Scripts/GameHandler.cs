@@ -34,6 +34,9 @@ public class GameHandler : MonoBehaviour {
 
     private GameHandler_PauseMenu pause_Menu;
 
+    public int travelsPast = 0;
+    public int travelsFuture = 0;
+
     
 
 
@@ -178,6 +181,7 @@ public class GameHandler : MonoBehaviour {
 
 
     public void goToPast(){
+        travelsPast++;
         isPast = true;
         isPresent = false;
         isFuture = false;
@@ -189,6 +193,11 @@ public class GameHandler : MonoBehaviour {
         past_player.SetActive(true);
         present_player.SetActive(false);
         future_player.SetActive(false);
+        if (travelsPast == 1)
+        {
+            string message = "Did I go back in time...?!\nHey I think the lab door might finally be open!";
+            makeMessagesAppear(message);
+        }
     }
 
     public void goToPresent(){
@@ -208,7 +217,7 @@ public class GameHandler : MonoBehaviour {
 
     public void goToFuture()
     {
-
+        travelsFuture++;
         isPast = false;
         isPresent = false;
         isFuture = true;
@@ -220,6 +229,11 @@ public class GameHandler : MonoBehaviour {
         past_player.SetActive(false);
         present_player.SetActive(false);
         future_player.SetActive(true);
+        if(travelsFuture == 1)
+        {
+            string message = "Did I travel to the future...?!\nHey I think the lab door might finally be open!";
+            makeMessagesAppear(message);
+        }
     }
 
     public void closeTextButton() {
