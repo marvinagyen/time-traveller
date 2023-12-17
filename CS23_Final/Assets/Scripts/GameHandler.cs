@@ -18,6 +18,7 @@ public class GameHandler : MonoBehaviour {
     public GameObject textButton;
 
     public TextMeshProUGUI msgtxt;
+    public TextMeshProUGUI TimeMarker;
 
     public GameObject future_pot;
     public GameObject flower_pot;
@@ -182,6 +183,9 @@ public class GameHandler : MonoBehaviour {
 
     public void goToPast(){
         travelsPast++;
+
+        TimeMarker.text = "Past";
+
         isPast = true;
         isPresent = false;
         isFuture = false;
@@ -202,6 +206,8 @@ public class GameHandler : MonoBehaviour {
 
     public void goToPresent(){
 
+        TimeMarker.text = "Present";
+
         isPast = false;
         isPresent = true;
         isFuture = false;
@@ -218,6 +224,8 @@ public class GameHandler : MonoBehaviour {
     public void goToFuture()
     {
         travelsFuture++;
+        TimeMarker.text = "Future";
+
         isPast = false;
         isPresent = false;
         isFuture = true;
