@@ -4927,6 +4927,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 73605c483905c430f9c11f536691382f, type: 3}
+    - target: {fileID: 6761499007621079459, guid: 6e23997564eff1741bf531b3bd5cc5ee, type: 3}
+      propertyPath: pickUpSound
+      value: 
+      objectReference: {fileID: 788639372}
     - target: {fileID: 7613614814096138127, guid: 6e23997564eff1741bf531b3bd5cc5ee, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -5804,7 +5808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2855483869486289730, guid: e131d53c238e247febf51e6cb1e1424a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3435614439844767180, guid: e131d53c238e247febf51e6cb1e1424a, type: 3}
       propertyPath: m_SizeDelta.x
@@ -9700,7 +9704,6 @@ MonoBehaviour:
   watchWalls: {fileID: 238229541}
   doorjiggle: {fileID: 679839887}
   doorOpened: {fileID: 1630209928}
-  moveBoxSound: {fileID: 7483510933223945286, guid: 101c7f72265e84037bb0aee5552ebee9, type: 3}
   deathCount: 0
 --- !u!61 &9127955806521406812
 BoxCollider2D:
