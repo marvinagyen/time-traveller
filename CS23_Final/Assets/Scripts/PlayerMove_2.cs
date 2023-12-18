@@ -30,7 +30,7 @@ public class PlayerMove_2 : MonoBehaviour
 
     public AudioSource doorjiggle;
     public AudioSource doorOpened;
-    public AudioSource moveBoxSound;
+    // public AudioSource moveBoxSound;
 
     private bool Past;
     private bool Present;
@@ -201,9 +201,9 @@ public class PlayerMove_2 : MonoBehaviour
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
         }
 
-        if (other.gameObject.tag == "Crate") {
-            moveBoxSound.Play(0);
-        }
+        // if (other.gameObject.tag == "Crate") {
+        //     moveBoxSound.Play(0);
+        // }
 
 
 
