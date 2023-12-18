@@ -21,6 +21,7 @@ TagManager:
   - laser
   - time2
   - Crate
+  - time3
   layers:
   - Default
   - TransparentFX
