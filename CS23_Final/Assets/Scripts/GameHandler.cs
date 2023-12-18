@@ -242,7 +242,7 @@ public class GameHandler : MonoBehaviour {
         future_player.SetActive(true);
         if(travelsFuture == 1)
         {
-            string message = "Did I travel to the future...?!\nHey I think the lab door might finally be open!";
+            string message = "Did I travel to the future...?!\nNow try pressing 1!";
             makeMessagesAppear(message);
         }
     }

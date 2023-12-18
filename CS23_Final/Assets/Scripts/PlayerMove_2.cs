@@ -125,7 +125,7 @@ public class PlayerMove_2 : MonoBehaviour
     {
         if (other.gameObject.tag == "watch"){
             canTimeTravel = true;
-            string message = "Woahhh... what's happening to me?? It feels like if you pressed 1, 2, or 3,\nsomething crazy might happen";
+            string message = "Woahhh... what just happened??\nTry pressing 3!";
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().progressBar1.SetActive(true);
             Destroy(other.gameObject);
