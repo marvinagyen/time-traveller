@@ -200,8 +200,10 @@ public class PlayerMove_2 : MonoBehaviour
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
         }
 
-
-
+        // if (other.gameObject.tag == "Crate") {
+        //     AudioSource moveBoxSound = other.gameObject.GetComponent<AudioSource>();
+        //     moveBoxSound.Play(0);
+        // }
 
 
 
