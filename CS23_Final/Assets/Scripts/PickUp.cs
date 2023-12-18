@@ -8,6 +8,8 @@ public class PickUp : MonoBehaviour{
       //public playerVFX playerPowerupVFX;
       public bool hasKey = false;
 
+      public AudioSource pickUpSound;
+
       void Start(){
             gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
             //playerPowerupVFX = GameObject.FindWithTag("Player").GetComponent<playerVFX>();
@@ -15,6 +17,7 @@ public class PickUp : MonoBehaviour{
 
       public void OnTriggerEnter2D (Collider2D other){
             if (other.gameObject.tag == "Player"){
+                  pickUpSound.Play(0);
                   hasKey = true;
                   Debug.Log(hasKey);
                   Debug.Log("Key has been acquired!");

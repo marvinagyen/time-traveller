@@ -38,7 +38,7 @@ public class GameHandler : MonoBehaviour {
     public int travelsPast = 0;
     public int travelsFuture = 0;
 
-    
+    public AudioSource timeTravelSound;
 
 
     private GameObject player;
@@ -133,9 +133,10 @@ public class GameHandler : MonoBehaviour {
     {
         // FOR CHANGING SCENES
         if (GameObject.FindWithTag("Player").GetComponent<PlayerMove_2>().canTimeTravel)
-        {
+        {   
             if (Input.GetKeyDown("1"))
             {   
+                timeTravelSound.Play(0);
                 if (isPresent == true) {
                     originalPos = player.transform.position;
                 }
@@ -150,6 +151,7 @@ public class GameHandler : MonoBehaviour {
             }
             if (Input.GetKeyDown("2"))
             {   
+                timeTravelSound.Play(0);
                 goToPresent();
                 if (player.transform.position.x > 30) {
                     player.transform.position = originalPos;
@@ -165,6 +167,7 @@ public class GameHandler : MonoBehaviour {
             }
             if (Input.GetKeyDown("3"))
             {
+                timeTravelSound.Play(0);
                 if (isPresent == true) {
                     originalPos = player.transform.position;
                 }

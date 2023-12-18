@@ -228,9 +228,9 @@ public class GameInventory : MonoBehaviour {
 
       public void CraftObject1(){
             //hanger/plier craft
-            crafting_sound.Play(0);
             InventoryAdd("item3"); // sample inventory item to be added, needs supporting UI images
             InventoryRemove("item2", 1); // sample inventory items to be removed
+            crafting_sound.Play(0);
             OpenCloseCraftBook();
       }
 
