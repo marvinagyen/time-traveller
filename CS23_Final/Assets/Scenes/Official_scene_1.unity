@@ -340,7 +340,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 7b425acbad6564076bda84ffdf8cd281, type: 3}
     - target: {fileID: 3692711024065246748, guid: 41c16704b6ef78643afc05b8f7902301, type: 3}
       propertyPath: m_Text
-      value: 1
+      value: x1
       objectReference: {fileID: 0}
     - target: {fileID: 5118320294249310685, guid: 41c16704b6ef78643afc05b8f7902301, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1866,7 +1866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9607844, g: 0.909804, b: 0.6431373, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3481,7 +3481,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: fb7709b6181224a0baa248445744f618, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6117,7 +6117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4190007411157491998, guid: e131d53c238e247febf51e6cb1e1424a, type: 3}
       propertyPath: m_Text
-      value: 1
+      value: x1
       objectReference: {fileID: 0}
     - target: {fileID: 4267759982836429600, guid: e131d53c238e247febf51e6cb1e1424a, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -6399,6 +6399,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pliers
       objectReference: {fileID: 0}
+    - target: {fileID: 7809707971814644262, guid: e131d53c238e247febf51e6cb1e1424a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bf4a264dbf69e48cb9eed0aceb057d3e, type: 3}
     - target: {fileID: 7919621252604992803, guid: e131d53c238e247febf51e6cb1e1424a, type: 3}
       propertyPath: m_text
       value: ??
@@ -7812,7 +7816,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: a1ad804435e7e4b29b17b9677c81a5f8, type: 3}
     - target: {fileID: 3692711024065246748, guid: 41c16704b6ef78643afc05b8f7902301, type: 3}
       propertyPath: m_Text
-      value: 1
+      value: x1
       objectReference: {fileID: 0}
     - target: {fileID: 5118320294249310685, guid: 41c16704b6ef78643afc05b8f7902301, type: 3}
       propertyPath: m_SizeDelta.x
@@ -8752,7 +8756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9607844, g: 0.909804, b: 0.6431373, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
