@@ -6368,6 +6368,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 6761499007621079459, guid: 6e23997564eff1741bf531b3bd5cc5ee, type: 3}
+      propertyPath: pickUpSound
+      value: 
+      objectReference: {fileID: 788639372}
     - target: {fileID: 7613614814096138127, guid: 6e23997564eff1741bf531b3bd5cc5ee, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
