@@ -270,10 +270,10 @@ public class PlayerMove_2 : MonoBehaviour
         {
             if (GameObject.FindWithTag("GameHandler").GetComponent<GameInventory>().hasPoison == true)
             {
-                // Destroy the enemy object
-                Destroy(collision.gameObject);
                 // Something to spawn the ID card item
                 Instantiate(idCard, collision.transform.position, Quaternion.identity);
+                // Destroy the enemy object
+                Destroy(collision.gameObject);
                 Debug.Log("Enemy killed with poison");
                 string killmsg = "Eureka!\nI was able to kill the scientist!";
                 GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(killmsg);
