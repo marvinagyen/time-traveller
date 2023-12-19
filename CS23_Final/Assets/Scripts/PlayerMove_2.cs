@@ -18,6 +18,13 @@ public class PlayerMove_2 : MonoBehaviour
     public bool isAlive = true;
     public bool canTimeTravel = true;
 
+    //NEW
+    public float speed = 10f; // player movement speed
+    private Vector3 change; // player movement direction
+    private Rigidbody2D rb2d;
+    private Renderer rend;
+
+
     public bool hasSeed = false;
     public bool beenPlanted = false;
     public bool beenPicked = false;
@@ -28,6 +35,8 @@ public class PlayerMove_2 : MonoBehaviour
     public bool hasWatchKey = false;
 
     public bool movedCrate = false;
+
+    private Animator animator;
 
     public GameObject watchWalls;
     public GameObject idCard;
@@ -44,42 +53,124 @@ public class PlayerMove_2 : MonoBehaviour
     public int deathCount = 0;
 
     void Start()
-    { 
-        rb2D = transform.GetComponent<Rigidbody2D>();
+    {
+        //OLD
+        //animator = GetComponent<Animator>();
+        //rb2D = transform.GetComponent<Rigidbody2D>();
         respawnPoint = transform.position;
         //GameObject.FindWithTag("GameHandler").GetComponent<GameInventory>().InventoryAdd("item7");
 
+        //NEW
+        animator = GetComponent<Animator>();
+        //rend = GetComponentInChildren<Renderer>();
+        rb2d = GetComponent<Rigidbody2D>();
+        //if (gameObject.GetComponent<Rigidbody2D>() != null)
+        //{
+        //    rb2d = GetComponent<Rigidbody2D>();
+        //}
 
     }
 
+    void MoveCharacter()
+    {
+        rb2d.MovePosition(transform.position + change * 3* speed * Time.deltaTime);
+    }
+ 
+
     void FixedUpdate()
     {
-        //NOTE: Horizontal axis: [a] / left arrow is -1, [d] / right arrow is 1
-        //NOTE: Vertical axis: [w] / up arrow, [s] / down arrow
-        Vector3 hvMove = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
         if (isAlive == true)
         {
-            transform.position = transform.position + hvMove * runSpeed * Time.deltaTime;
+            change = Vector3.zero;
+            change.x = Input.GetAxisRaw("Horizontal");
+            change.y = Input.GetAxisRaw("Vertical");
 
-            if ((Input.GetAxis("Horizontal") != 0) || (Input.GetAxis("Vertical") != 0))
+            if (Input.GetAxis("Horizontal") > 0)
             {
-                //     anim.SetBool ("Walk", true);
-                //     if (!WalkSFX.isPlaying){
-                //           WalkSFX.Play();
-                //     }
+                Vector3 newScale = transform.localScale;
+                
+                if (GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().isPast)
+                {
+                    newScale.x = -2.0f;
+                }
+                else
+                {
+                    newScale.x = 2.0f;
+                }
+                transform.localScale = newScale;
             }
-            else
+            else if (Input.GetAxis("Horizontal") < 0)
             {
-                //     anim.SetBool ("Walk", false);
-                //     WalkSFX.Stop();
+                Vector3 newScale = transform.localScale;
+                
+                if (GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().isPast)
+                {
+                    newScale.x = 2.0f;
+                }
+                else
+                {
+                    newScale.x = -2.0f;
+                }
+                transform.localScale = newScale;
             }
 
-            // Turning. Reverse if input is moving the Player right and Player faces left.
-            if ((hvMove.x < 0 && !FaceRight) || (hvMove.x > 0 && FaceRight))
+            //if (GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().isPast)
+            //{
+            //    Vector3 newScale = transform.localScale;
+            //    newScale.x = -2.0f;
+            //    transform.localScale = newScale;
+            //}
+
+
+            //update animation and move
+            if (change != Vector3.zero)
             {
-                playerTurn();
+                MoveCharacter();
+                //animator.SetFloat("moveX", change.x);
+                //animator.SetFloat("moveY", change.y);
+                //animator.SetBool("moving", true);
             }
+            //else
+            //{
+            //    animator.SetBool("moving", false);
+            //}
+
+
+            //if (Input.GetAxis("Horizontal") > 0)
+            //{
+            //    Vector3 newScale = transform.localScale;
+            //    newScale.x = 2.0f;
+            //    transform.localScale = newScale;
+            //}
+            //else if (Input.GetAxis("Horizontal") < 0)
+            //{
+            //    Vector3 newScale = transform.localScale;
+            //    newScale.x = -2.0f;
+            //    transform.localScale = newScale;
+            //}
+
         }
+
+
+
+
+        //old
+        //Vector3 hvMove = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
+        //if (isAlive == true)
+        //{
+        //    transform.position = transform.position + hvMove * runSpeed * Time.deltaTime;
+
+        //    UpdateAnimationAndMove();
+
+        //    // Turning. Reverse if input is moving the Player right and Player faces left.
+        //    if ((hvMove.x < 0 && !FaceRight) || (hvMove.x > 0 && FaceRight))
+        //    {
+        //        playerTurn();
+        //    }
+        //}
+
+
+
         hasWatchKey = GameObject.FindWithTag("GameHandler").GetComponent<GameInventory>().hasWatchKey;
 
         Present = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().isPresent;
