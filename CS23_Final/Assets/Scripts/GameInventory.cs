@@ -9,6 +9,7 @@ public class GameInventory : MonoBehaviour {
       public bool InvIsOpen = false;
       public bool CraftIsOpen = false;
       public bool hasWatchKey = false;
+      public bool hasPoison = false;
 
       public AudioSource inventoryOpen;
       public AudioSource inventoryClose;
@@ -218,7 +219,7 @@ public class GameInventory : MonoBehaviour {
             InvIsOpen = !InvIsOpen;
       }
 
-      //Open and Close the Cookbook
+      //Open and Close the Craftbook
       public void OpenCloseCraftBook(){
             if (CraftIsOpen){ CraftMenu.SetActive(false); }
             else { CraftMenu.SetActive(true); }
@@ -241,6 +242,7 @@ public class GameInventory : MonoBehaviour {
             InventoryRemove("item4", 1); InventoryRemove("item6", 1); // sample inventory items to be removed, item3 is the inventory
             string message = "Yikes!! That poison looks deadly!\nI wouldn't wish that on my worst enemies! Or maybe I would...";
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
+            bool hasPoison = true;
             OpenCloseCraftBook();
     }
 

@@ -21,6 +21,7 @@ public class PlayerMove_2 : MonoBehaviour
     public bool hasSeed = false;
     public bool beenPlanted = false;
     public bool beenPicked = false;
+    public bool hasPoison = false;
    
     public Vector3 respawnPoint;
 
@@ -29,6 +30,7 @@ public class PlayerMove_2 : MonoBehaviour
     public bool movedCrate = false;
 
     public GameObject watchWalls;
+    public GameObject id_card;
 
     public AudioSource doorjiggle;
     public AudioSource doorOpened;
@@ -226,21 +228,56 @@ public class PlayerMove_2 : MonoBehaviour
 
     }
 
-       void OnTriggerEnter2D (Collider2D collision) {
-        if (collision.tag == "enemy") {
-            transform.position = respawnPoint;
-            deathCount++;
+    //    void OnTriggerEnter2D (Collider2D collision) {
+    //     if (collision.tag == "enemy") {
+    //         transform.position = respawnPoint;
+    //         deathCount++;
 
-            if (deathCount == 1)
+    //         if (deathCount == 1)
+    //         {
+    //             string message = "Eek! These scientists are dangerous!\nI better not get too close.";
+    //             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
+    //         }
+    //     }
+    //     else if (collision.tag == "Checkpoint") {
+
+    //         respawnPoint = transform.position;
+    //         }
+    // }
+
+     void OnTriggerEnter2D (Collider2D collision)
+        {
+            if (collision.tag == "enemy")
             {
-                string message = "Eek! These scientists are dangerous!\nI better not get too close.";
-                GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
+                if (hasPoison == true)
+                {
+                    // Destroy the enemy object
+                    Destroy(collision.gameObject);
+                    // Something to spawn the ID card item
+                    Instantiate(id_card, collision.transform.position, Quaternion.identity);
+                    Debug.Log("Enemy killed with poison");
+                    string killmsg = "Eureka!\nI was able to kill the scientist!";
+                    GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(killmsg);
+                }
+                else
+                {
+                    transform.position = respawnPoint;
+                    deathCount++;
+
+                    if (deathCount == 1)
+                    {
+                        string message = "Eek! These scientists are dangerous!\nI better not get too close.";
+                        GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
+                    }
+                }
+            }
+            else if (collision.tag == "Checkpoint")
+            {
+                respawnPoint = transform.position;
             }
         }
-        else if (collision.tag == "Checkpoint") {
 
-            respawnPoint = transform.position;
-            }
-    }
 }
+
+    
 
