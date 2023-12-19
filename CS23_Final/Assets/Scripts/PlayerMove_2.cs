@@ -88,29 +88,29 @@ public class PlayerMove_2 : MonoBehaviour
             if (Input.GetAxis("Horizontal") > 0)
             {
                 Vector3 newScale = transform.localScale;
-                
-                if (GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().isPast)
-                {
-                    newScale.x = -2.0f;
-                }
-                else
-                {
-                    newScale.x = 2.0f;
-                }
+                newScale.x = -2.0f;
+                //if (GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().isPast)
+                //{
+                //    newScale.x = -2.0f;
+                //}
+                //else
+                //{
+                //    newScale.x = 2.0f;
+                //}
                 transform.localScale = newScale;
             }
             else if (Input.GetAxis("Horizontal") < 0)
             {
                 Vector3 newScale = transform.localScale;
-                
-                if (GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().isPast)
-                {
-                    newScale.x = 2.0f;
-                }
-                else
-                {
-                    newScale.x = -2.0f;
-                }
+                newScale.x = 2.0f;
+                //if (GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().isPast)
+                //{
+                //    newScale.x = 2.0f;
+                //}
+                //else
+                //{
+                //    newScale.x = -2.0f;
+                //}
                 transform.localScale = newScale;
             }
 
