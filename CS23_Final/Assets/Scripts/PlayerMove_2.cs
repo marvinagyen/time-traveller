@@ -30,6 +30,7 @@ public class PlayerMove_2 : MonoBehaviour
 
     public GameObject watchWalls;
     public GameObject idCard;
+    public GameObject idWall;
 
     public AudioSource doorjiggle;
     public AudioSource doorOpened;
@@ -160,7 +161,6 @@ public class PlayerMove_2 : MonoBehaviour
 
         if (other.gameObject.tag == "watchWall")
         {
-            Debug.Log("test wall hit");
 
             if (hasWatchKey)
             {
@@ -172,6 +172,25 @@ public class PlayerMove_2 : MonoBehaviour
             else
             {
                 GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().msgtxt.text = "It looks like this door is locked...\nWait! A keyhole!\nMaybe I could fashion a key...";
+                GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().textButton.SetActive(true);
+                doorjiggle.Play(0);
+            }
+
+        }
+
+        if (other.gameObject.tag == "idWall")
+        {
+
+            if (GameObject.FindWithTag("GameHandler").GetComponent<GameInventory>().hasidCard)
+            {
+                idWall.SetActive(false);
+                GameObject.FindWithTag("GameHandler").GetComponent<GameInventory>().InventoryRemove("item8", 1);
+                doorOpened.Play(0);
+
+            }
+            else
+            {
+                GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().msgtxt.text = "It looks like this door is locked...\nSeems like an ID card would grant\nyou access.";
                 GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().textButton.SetActive(true);
                 doorjiggle.Play(0);
             }

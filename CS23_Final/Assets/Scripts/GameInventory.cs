@@ -10,6 +10,7 @@ public class GameInventory : MonoBehaviour {
       public bool CraftIsOpen = false;
       public bool hasWatchKey = false;
       public bool hasPoison = false;
+      public bool hasidCard = false;
 
       public AudioSource inventoryOpen;
       public AudioSource inventoryClose;
@@ -198,7 +199,12 @@ public class GameInventory : MonoBehaviour {
         {
             hasWatchKey = true;
         }
-            InventoryDisplay();
+
+        if (item8num == 1)
+        {
+            hasidCard = true;
+        }
+        InventoryDisplay();
       }
 
       //public void CoinChange(int amount){
