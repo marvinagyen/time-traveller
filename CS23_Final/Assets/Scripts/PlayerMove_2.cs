@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove_2 : MonoBehaviour
 {
@@ -155,9 +156,11 @@ public class PlayerMove_2 : MonoBehaviour
         if (other.gameObject.tag == "time3")
         {
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().progressBar3.SetActive(true);
-            string message = "You found the last piece of the time machine!";
-            GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
+            //string message = "You found the last piece of the time machine!";
+            //GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
             Destroy(other.gameObject);
+            SceneManager.LoadScene("EndingScene", LoadSceneMode.Single);
+
         }
 
         if (other.gameObject.tag == "watchWall")
