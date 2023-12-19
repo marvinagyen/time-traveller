@@ -23,6 +23,7 @@ TagManager:
   - Crate
   - time3
   - crate_2
+  - idWall
   layers:
   - Default
   - TransparentFX
