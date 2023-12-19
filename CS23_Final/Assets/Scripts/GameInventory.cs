@@ -129,6 +129,10 @@ public class GameInventory : MonoBehaviour {
         {
             GameObject.FindWithTag("Player").GetComponent<PlayerMove_2>().hasSeed = true;
         }
+        if (item8num >= 1)
+        {
+            hasidCard = true;
+        }
     }
 
       public void InventoryAdd(string item){
@@ -200,10 +204,7 @@ public class GameInventory : MonoBehaviour {
             hasWatchKey = true;
         }
 
-        if (item8num >= 1)
-        {
-            hasidCard = true;
-        }
+        
         InventoryDisplay();
       }
 

@@ -232,7 +232,7 @@ public class PlayerMove_2 : MonoBehaviour
                 message = "Did the soil make the flower poisonous? Press P to pick it!";
                 if (beenPicked)
                 {
-                    message = "Seems like this plant has been\npicked already";
+                    message = "Seems like this plant has been\npicked already. Maybe it can be crafted into something...";
                 }
             }
             else
