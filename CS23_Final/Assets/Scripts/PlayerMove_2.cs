@@ -139,7 +139,7 @@ public class PlayerMove_2 : MonoBehaviour
 
         if (other.gameObject.tag == "crate_2")
         {
-            string message = "Nice job! Just remember,\nif you get stuck trying traveling time!";
+            string message = "Nice job! Just remember,\nif you get stuck try traveling time!";
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
             movedCrate = true;
         }
@@ -147,7 +147,7 @@ public class PlayerMove_2 : MonoBehaviour
         if (other.gameObject.tag == "time2")
         {
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().progressBar2.SetActive(true);
-            string message = "You found another piece of the time machine!";
+            string message = "You found another piece of the time machine!\nYou are one step closer to escaping!";
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
             Destroy(other.gameObject);
         }
