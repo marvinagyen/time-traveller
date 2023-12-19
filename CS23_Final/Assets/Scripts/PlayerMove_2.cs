@@ -148,7 +148,7 @@ public class PlayerMove_2 : MonoBehaviour
         if (other.gameObject.tag == "time2")
         {
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().progressBar2.SetActive(true);
-            string message = "You found another piece of the time machine!\nYou are one step closer to escaping!";
+            string message = "You found another piece of the time\nmachine!You are one step closer\nto escaping!";
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
             Destroy(other.gameObject);
         }

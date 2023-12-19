@@ -200,7 +200,7 @@ public class GameInventory : MonoBehaviour {
             hasWatchKey = true;
         }
 
-        if (item8num == 1)
+        if (item8num >= 1)
         {
             hasidCard = true;
         }
