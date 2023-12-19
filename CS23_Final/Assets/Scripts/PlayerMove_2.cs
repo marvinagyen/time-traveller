@@ -46,7 +46,8 @@ public class PlayerMove_2 : MonoBehaviour
     { 
         rb2D = transform.GetComponent<Rigidbody2D>();
         respawnPoint = transform.position;
-        
+        //GameObject.FindWithTag("GameHandler").GetComponent<GameInventory>().InventoryAdd("item7");
+
 
     }
 

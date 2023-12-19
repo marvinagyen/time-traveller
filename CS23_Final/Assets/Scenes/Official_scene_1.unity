@@ -741,6 +741,11 @@ RectTransform:
   m_AnchoredPosition: {x: -363.29504, y: 314.03}
   m_SizeDelta: {x: 101.1, y: 28.236}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &155908657 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8414807811976430568, guid: 6e23997564eff1741bf531b3bd5cc5ee, type: 3}
+  m_PrefabInstance: {fileID: 1205739596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &178011124
 GameObject:
   m_ObjectHideFlags: 0
@@ -11649,7 +11654,8 @@ MonoBehaviour:
   hasWatchKey: 0
   movedCrate: 0
   watchWalls: {fileID: 238229541}
-  idCard: {fileID: 0}
+  idCard: {fileID: 155908657}
+  idWall: {fileID: 1872344673}
   doorjiggle: {fileID: 679839887}
   doorOpened: {fileID: 1630209928}
   deathCount: 0
