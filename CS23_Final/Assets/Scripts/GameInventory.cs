@@ -242,7 +242,7 @@ public class GameInventory : MonoBehaviour {
             InventoryRemove("item4", 1); InventoryRemove("item6", 1); // sample inventory items to be removed, item3 is the inventory
             string message = "Yikes!! That poison looks deadly!\nI wouldn't wish that on my worst enemies! Or maybe I would...";
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
-            bool hasPoison = true;
+            hasPoison = true;
             OpenCloseCraftBook();
     }
 
