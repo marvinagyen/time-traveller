@@ -73,7 +73,7 @@ public class PlayerMove_2 : MonoBehaviour
 
     void MoveCharacter()
     {
-        rb2d.MovePosition(transform.position + change * 3* speed * Time.deltaTime);
+        rb2d.MovePosition(transform.position + change * speed * Time.deltaTime);
     }
  
 
