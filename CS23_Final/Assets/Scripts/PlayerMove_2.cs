@@ -26,6 +26,8 @@ public class PlayerMove_2 : MonoBehaviour
 
     public bool hasWatchKey = false;
 
+    public bool movedCrate = false;
+
     public GameObject watchWalls;
 
     public AudioSource doorjiggle;
@@ -130,6 +132,13 @@ public class PlayerMove_2 : MonoBehaviour
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().progressBar1.SetActive(true);
             Destroy(other.gameObject);
            
+        }
+
+        if (other.gameObject.tag == "crate_2")
+        {
+            string message = "Nice job! Just remember,\nif you get stuck trying traveling time!";
+            GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
+            movedCrate = true;
         }
 
         if (other.gameObject.tag == "time2")

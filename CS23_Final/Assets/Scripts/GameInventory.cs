@@ -117,7 +117,7 @@ public class GameInventory : MonoBehaviour {
             }
             else { buttonCraft1.SetActive(false); }
 
-        if ((item4num == 1) && (item6num == 1))
+        if ((item4num >= 1) && (item6num == 1))
         {       // sample inventory items to be used
             buttonCraft2.SetActive(true);
         }
