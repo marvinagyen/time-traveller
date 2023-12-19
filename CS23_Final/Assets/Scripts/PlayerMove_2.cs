@@ -19,7 +19,7 @@ public class PlayerMove_2 : MonoBehaviour
     public bool canTimeTravel = true;
 
     //NEW
-    public float speed = 10f; // player movement speed
+    public float speed = 5f; // player movement speed
     private Vector3 change; // player movement direction
     private Rigidbody2D rb2d;
     private Renderer rend;
@@ -88,29 +88,29 @@ public class PlayerMove_2 : MonoBehaviour
             if (Input.GetAxis("Horizontal") > 0)
             {
                 Vector3 newScale = transform.localScale;
-                newScale.x = -2.0f;
-                //if (GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().isPast)
-                //{
-                //    newScale.x = -2.0f;
-                //}
-                //else
-                //{
-                //    newScale.x = 2.0f;
-                //}
+                //newScale.x = -2.0f;
+                if (GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().isPast)
+                {
+                    newScale.x = -2.0f;
+                }
+                else
+                {
+                    newScale.x = 2.0f;
+                }
                 transform.localScale = newScale;
             }
             else if (Input.GetAxis("Horizontal") < 0)
             {
                 Vector3 newScale = transform.localScale;
-                newScale.x = 2.0f;
-                //if (GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().isPast)
-                //{
-                //    newScale.x = 2.0f;
-                //}
-                //else
-                //{
-                //    newScale.x = -2.0f;
-                //}
+                //newScale.x = 2.0f;
+                if (GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().isPast)
+                {
+                    newScale.x = 2.0f;
+                }
+                else
+                {
+                    newScale.x = -2.0f;
+                }
                 transform.localScale = newScale;
             }
 
