@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove_2 : MonoBehaviour
 {
@@ -46,7 +47,8 @@ public class PlayerMove_2 : MonoBehaviour
     { 
         rb2D = transform.GetComponent<Rigidbody2D>();
         respawnPoint = transform.position;
-        
+        //GameObject.FindWithTag("GameHandler").GetComponent<GameInventory>().InventoryAdd("item7");
+
 
     }
 
@@ -138,7 +140,7 @@ public class PlayerMove_2 : MonoBehaviour
 
         if (other.gameObject.tag == "crate_2")
         {
-            string message = "Nice job! Just remember,\nif you get stuck trying traveling time!";
+            string message = "Nice job! Just remember,\nif you get stuck try traveling time!";
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
             movedCrate = true;
         }
@@ -146,7 +148,7 @@ public class PlayerMove_2 : MonoBehaviour
         if (other.gameObject.tag == "time2")
         {
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().progressBar2.SetActive(true);
-            string message = "You found another piece of the time machine!";
+            string message = "You found another piece of the time machine!\nYou are one step closer to escaping!";
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
             Destroy(other.gameObject);
         }
@@ -154,9 +156,11 @@ public class PlayerMove_2 : MonoBehaviour
         if (other.gameObject.tag == "time3")
         {
             GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().progressBar3.SetActive(true);
-            string message = "You found the last piece of the time machine!";
-            GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
+            //string message = "You found the last piece of the time machine!";
+            //GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(message);
             Destroy(other.gameObject);
+            SceneManager.LoadScene("EndingScene", LoadSceneMode.Single);
+
         }
 
         if (other.gameObject.tag == "watchWall")
@@ -269,10 +273,10 @@ public class PlayerMove_2 : MonoBehaviour
         {
             if (GameObject.FindWithTag("GameHandler").GetComponent<GameInventory>().hasPoison == true)
             {
-                // Destroy the enemy object
-                Destroy(collision.gameObject);
                 // Something to spawn the ID card item
                 Instantiate(idCard, collision.transform.position, Quaternion.identity);
+                // Destroy the enemy object
+                Destroy(collision.gameObject);
                 Debug.Log("Enemy killed with poison");
                 string killmsg = "Eureka!\nI was able to kill the scientist!";
                 GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().makeMessagesAppear(killmsg);
