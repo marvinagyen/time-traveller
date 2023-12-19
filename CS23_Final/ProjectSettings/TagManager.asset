@@ -22,6 +22,7 @@ TagManager:
   - time2
   - Crate
   - time3
+  - crate_2
   layers:
   - Default
   - TransparentFX
