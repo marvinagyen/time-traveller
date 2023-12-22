@@ -18,7 +18,6 @@ public class GameHandler : MonoBehaviour {
     public GameObject textButton;
 
     public TextMeshProUGUI msgtxt;
-    public TextMeshProUGUI TimeMarker;
 
     public GameObject future_pot;
     public GameObject flower_pot;
@@ -32,6 +31,10 @@ public class GameHandler : MonoBehaviour {
     public GameObject progressBar1;
     public GameObject progressBar2;
     public GameObject progressBar3;
+
+    public GameObject pastSign;
+    public GameObject presentSign;
+    public GameObject futureSign;
 
     private GameHandler_PauseMenu pause_Menu;
 
@@ -75,6 +78,10 @@ public class GameHandler : MonoBehaviour {
         progressBar1.SetActive(false);
         progressBar2.SetActive(false);
         progressBar3.SetActive(false);
+
+        pastSign.SetActive(false);
+        presentSign.SetActive(true);
+        futureSign.SetActive(false);
 
 
 
@@ -187,7 +194,6 @@ public class GameHandler : MonoBehaviour {
     public void goToPast(){
         
 
-        TimeMarker.text = "Past";
 
         isPast = true;
         isPresent = false;
@@ -206,11 +212,14 @@ public class GameHandler : MonoBehaviour {
             makeMessagesAppear(message);
         }
         beenToPast = true;
+
+        pastSign.SetActive(true);
+        presentSign.SetActive(false);
+        futureSign.SetActive(false);
     }
 
     public void goToPresent(){
 
-        TimeMarker.text = "Present";
 
         isPast = false;
         isPresent = true;
@@ -223,11 +232,14 @@ public class GameHandler : MonoBehaviour {
         past_player.SetActive(false);
         present_player.SetActive(true);
         future_player.SetActive(false);
+
+        pastSign.SetActive(false);
+        presentSign.SetActive(true);
+        futureSign.SetActive(false);
     }
 
     public void goToFuture()
     {
-        TimeMarker.text = "Future";
 
         isPast = false;
         isPresent = false;
@@ -240,7 +252,11 @@ public class GameHandler : MonoBehaviour {
         past_player.SetActive(false);
         present_player.SetActive(false);
         future_player.SetActive(true);
-    
+
+        pastSign.SetActive(false);
+        presentSign.SetActive(false);
+        futureSign.SetActive(true);
+
         if (!beenToFuture)
         {
             string message = "Did I travel to the future...?!\nNow try pressing 1!";
